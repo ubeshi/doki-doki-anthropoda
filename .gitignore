@@ -1,0 +1,6 @@
+errors.txt
+log.txt
+game\saves\*
+game\cache\*
+game\traceback.txt
+.vscode\*
