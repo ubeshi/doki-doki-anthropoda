@@ -13,6 +13,8 @@
   image mia normal = "images/mia/normal.png"
   image permione normal = "images/permione/normal.png"
 
+  image black = Solid("#000")
+
 define mc = Character("[player_name]")
 define antonio = Character("Antonio")
 define mia = Character("Mia")
@@ -27,52 +29,105 @@ label start:
   $ player_name = renpy.input("What is your name, Magical Boy?")
   $ player_name = player_name.strip()
 
-  if not player_name:
-    $ player_name = "Brother of Mia"
+  #if not player_name:
+  #  $ player_name = "Brother of Mia"
 
-  mc "I'm [player_name]!"
-  antonio "I'm an ant!"
+  #mc "I'm [player_name]!"
+  #antonio "I'm an ant!"
+
+  #hide antonio normal
+  #show mia normal
+
+  #mia "I'm a moth and one of the main love interests!"
+  
+  #hide mia normal
+  #show permione normal
+
+  #permione "I'm a praying mantis and another of the main love interests!"
+
+  #scene bg classroom
+
+  #mc "I'm in a classroom? WOAH"
+
+  #scene bg club 
+
+  #mc "I'm in a club?! Wow!"
+
+  #scene bg club_2
+
+  #mc "I'm in a club again!? Sheeesh."
+
+  #scene bg college_outside 
+
+  #mc "I'm outside of my college."
+
+  #scene bg flower_bed
+
+  #mc "I hope I don't see any sexy plants here."
+
+  #scene bg other_dorm
+
+  #mc "I sure hope not to see any other bugs in this other dorm."
+
+  #scene bg track
+
+  #mc "Wow! I am so good at track and field."
+
+  #scene bg tunnel 
+
+  #mc "This is a very scary tunnel."
 
   hide antonio normal
-  show mia normal
-
-  mia "I'm a moth and one of the main love interests!"
   
-  hide mia normal
-  show permione normal
+  #return
 
-  permione "I'm a praying mantis and another of the main love interests!"
+label Day_3:
+  scene black
+  play music "music/sfx/human/snoring.mp3" volume 0.5
+  
+  mc "Zzzz....ZZzzz...."
 
-  scene bg classroom
+  play music "music/sfx/magic01/strange_bell.mp3" volume 0.5
 
-  mc "I'm in a classroom? WOAH"
+  mc "!!!"
+  
+  play music "music/sfx/human/walking_in_a_house1.mp3" volume 0.5
+  scene bg room
+  show antonio normal
 
-  scene bg club 
+  voice "music/sfx/human/man_gargle1.mp3"
+  antonio "\"RISE N SHINE MY BOY!\""
+  
+  stop music
+  play music "music/tracks/7_emotional_piano.wav" volume 0.5
 
-  mc "I'm in a club?! Wow!"
+  #TODO add in choice names
+  voice "music/sfx/human/man_gargle1.mp3"
+  antonio "\"You came back pretty late last night with…(insert yesterdays choice)\n
+  I thought you mightve been interested in (insert other choice name) instead…\""
+  
+  voice "music/sfx/human/man_gargle1.mp3"
+  antonio "\"Maybe you can decide who you want to take to the cricket club today at the track and field event!\n
+  OH! Don’t forget that the ladybug fan club signed you up for the 100m sprint!\n
+  There’ll be some tough competition but they dont stand a chance against you!!\""
 
-  scene bg club_2
+  mc "\"Thanks...\""
 
-  mc "I'm in a club again!? Sheeesh."
+  mc "I can’t remember much from last night after listening to music with (insert yesterdays choice)...\n
+  I wonder how I got back to my dorm…."
 
-  scene bg college_outside 
+  mc "Best to focus on the sprint later today,\n
+  I better start stretching if I'm going to stand a chance with my soft lumps and juicy body."
 
-  mc "I'm outside of my college."
+  hide antonio normal
+  stop music
+  
+  show bg track
+  with fade
 
-  scene bg flower_bed
+  
 
-  mc "I hope I don't see any sexy plants here."
-
-  scene bg other_dorm
-
-  mc "I sure hope not to see any other bugs in this other dorm."
-
-  scene bg track
-
-  mc "Wow! I am so good at track and field."
-
-  scene bg tunnel 
-
-  mc "This is a very scary tunnel."
-
+  
+  
+  
   return

@@ -1,0 +1,18 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+Before loading the script.
+WindowsError: [Error 267] The directory name is invalid: u'C:\\Users\\jadal\\Documents\\GitHub\\insect-dating-sim\\game\\gui.rpyc\\*.*'
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "C:\Users\jadal\Desktop\renpy-7.4.10-sdk/renpy/bootstrap.py", line 331, in bootstrap
+    renpy.main.main()
+  File "C:\Users\jadal\Desktop\renpy-7.4.10-sdk/renpy/main.py", line 388, in main
+    for fn in os.listdir(dir):
+WindowsError: [Error 267] The directory name is invalid: u'C:\\Users\\jadal\\Documents\\GitHub\\insect-dating-sim\\game\\gui.rpyc\\*.*'
+
+Windows-10-10.0.19041
+Ren'Py 7.4.10.2178
+ 
+Sun Nov 21 15:38:25 2021
