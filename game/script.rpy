@@ -15,10 +15,37 @@
 
   image black = Solid("#000")
 
+init python:
+  def antonio_voice(event, interact=True, **kwargs):
+    if not interact:
+      return 
+    if event == "begin":
+      renpy.sound.play("music/sfx/human/man_gargle1.mp3", relative_volume = 0.25) 
+    elif event == "end":
+      renpy.sound.stop()
+
+  def mia_voice(event, interact=True, **kwargs):
+    if not interact:
+      return 
+    if event == "begin":
+      renpy.sound.play("music/sfx/magic01/magic_elevator.mp3", relative_volume = 0.10) 
+    elif event == "end":
+      renpy.sound.stop()
+
+  def permione_voice(event, interact=True, **kwargs):
+    if not interact:
+      return 
+    if event == "begin":
+      renpy.sound.play("music/sfx/human/woman_gargle.mp3", relative_volume = 0.25) 
+    elif event == "end":
+      renpy.sound.stop()
+
+
 define mc = Character("[player_name]")
-define antonio = Character("Antonio")
-define mia = Character("Mia")
-define permione = Character("Permione")
+define antonio = Character("Antonio", callback = antonio_voice)
+define mia = Character("Mia", callback = mia_voice)
+define permione = Character("Permione", callback = permione_voice)
+
 
 label start:
 
@@ -95,18 +122,15 @@ label Day_3:
   scene bg room
   show antonio normal
 
-  voice "music/sfx/human/man_gargle1.mp3"
   antonio "\"RISE N SHINE MY BOY!\""
   
   stop music
   play music "music/tracks/7_emotional_piano.wav" volume 0.5
 
   #TODO add in choice names
-  voice "music/sfx/human/man_gargle1.mp3"
   antonio "\"You came back pretty late last night with…(insert yesterdays choice)\n
   I thought you mightve been interested in (insert other choice name) instead…\""
   
-  voice "music/sfx/human/man_gargle1.mp3"
   antonio "\"Maybe you can decide who you want to take to the cricket club today at the track and field event!\n
   OH! Don’t forget that the ladybug fan club signed you up for the 100m sprint!\n
   There’ll be some tough competition but they dont stand a chance against you!!\""
@@ -118,6 +142,10 @@ label Day_3:
 
   mc "Best to focus on the sprint later today,\n
   I better start stretching if I'm going to stand a chance with my soft lumps and juicy body."
+
+  mia "testing"
+
+  permione "testing"
 
   hide antonio normal
   stop music

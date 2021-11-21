@@ -2,9 +2,10 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 84: expected statement.
-    Solid("#000")
-                 ^
+File "game/script.rpy", line 24: invalid syntax
+    elif event == "slow_done":
+        ^
+    
 
 Ren'Py Version: Ren'Py 7.4.10.2178
-Sun Nov 21 15:48:06 2021
+Sun Nov 21 16:38:12 2021
