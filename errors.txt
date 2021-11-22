@@ -2,10 +2,17 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 24: invalid syntax
-    elif event == "slow_done":
-        ^
+File "game/script.rpy", line 139: end of line expected.
+    mc """\"Thanks...\""
+         ^
     
+      I can’t remember much from last night after listening to music with (insert yesterdays choice)...
+    
+      I wonder how I got back to my dorm….
+    
+      Best to focus on the sprint later today,
+    
+      I better start stretching if I'm going to stand a chance with my soft lumps and juicy body."""
 
 Ren'Py Version: Ren'Py 7.4.10.2178
-Sun Nov 21 16:38:12 2021
+Sun Nov 21 17:02:26 2021
