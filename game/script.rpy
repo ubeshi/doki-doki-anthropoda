@@ -309,4 +309,33 @@ label Day_3:
   show permion normal
   permione "\"YES BABY I KNEW YOU COULD DO IT!\""
 
+  ladybug """\"[player_name]! [player_name]! [player_name]!\"
+
+  \"WE KNEW YOU COULD DO IT!\"
+
+  \"WE LOVE YOU!!!\"
+
+  \"AHHHH!\""""
+
+  mc """\"OH MY GOD! How did this happen?!?!\"
+
+  \"I’ve never won anything before this is insane!\""""
+
+  permione  """\"[player_name]! You were amazing! I knew if anyone could do it you could!!!\"
+
+  \"We HAVE to celebrate together ;)\"
+
+  \"Come watch my long jump event and after we can go celebrate just us?\""""
+
+  mia """\"WAHHHHHHH \*sniffles\* Im so happy for you! \"
+
+  \"Congratulations!\"
+
+  \"I wish I was as good as you…\"
+
+  \"I came dead last in my discus event.. \*sniffles\*\""""
+
+  
+
+
   return
