@@ -1,30 +1,22 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 301, in script
-    show antonio normal at centre
-  File "game/script.rpy", line 301, in <module>
-    show antonio normal at centre
-NameError: name 'centre' is not defined
+  File "game/script.rpy", line 444, in script
+    jump Day_4
+ScriptError: could not find label 'Day_4'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 301, in script
-    show antonio normal at centre
-  File "C:\Users\jadal\Desktop\renpy-7.4.10-sdk/renpy/ast.py", line 1197, in execute
-    show_imspec(self.imspec, atl=getattr(self, "atl", None))
-  File "C:\Users\jadal\Desktop\renpy-7.4.10-sdk/renpy/ast.py", line 1156, in show_imspec
-    at_list = [ renpy.python.py_eval(i) for i in at_list ]
-  File "C:\Users\jadal\Desktop\renpy-7.4.10-sdk/renpy/python.py", line 2276, in py_eval
-    return py_eval_bytecode(code, globals, locals)
-  File "C:\Users\jadal\Desktop\renpy-7.4.10-sdk/renpy/python.py", line 2269, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "game/script.rpy", line 301, in <module>
-    show antonio normal at centre
-NameError: name 'centre' is not defined
+  File "game/script.rpy", line 444, in script
+    jump Day_4
+  File "C:\Users\jadal\Desktop\renpy-7.4.10-sdk/renpy/ast.py", line 1757, in execute
+    rv = renpy.game.script.lookup(target)
+  File "C:\Users\jadal\Desktop\renpy-7.4.10-sdk/renpy/script.py", line 918, in lookup
+    raise ScriptError("could not find label '%s'." % str(original))
+ScriptError: could not find label 'Day_4'.
 
 Windows-10-10.0.19041
 Ren'Py 7.4.10.2178
 Insect Incest 1.0
-Sun Nov 21 17:59:20 2021
+Sun Nov 21 21:15:43 2021

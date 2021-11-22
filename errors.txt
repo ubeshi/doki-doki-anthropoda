@@ -2,17 +2,13 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 139: end of line expected.
-    mc """\"Thanks...\""
-         ^
-    
-      I can’t remember much from last night after listening to music with (insert yesterdays choice)...
-    
-      I wonder how I got back to my dorm….
-    
-      Best to focus on the sprint later today,
-    
-      I better start stretching if I'm going to stand a chance with my soft lumps and juicy body."""
+File "game/script.rpy", line 264: expected end of line
+    voice "music/sfx/human/running_on_the_gravel.mp3" volume 0.5
+                                                      ^
+
+File "game/script.rpy", line 313: expected end of line
+    voice "music/sfx/human/running_on_the_gravel.mp3" volume 0.5
+                                                      ^
 
 Ren'Py Version: Ren'Py 7.4.10.2178
-Sun Nov 21 17:02:26 2021
+Sun Nov 21 19:56:34 2021
