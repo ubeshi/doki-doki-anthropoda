@@ -4,3 +4,5 @@ game\saves\*
 game\cache\*
 game\traceback.txt
 .vscode\*
+*.rpymc
+*.rpyc
