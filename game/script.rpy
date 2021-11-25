@@ -12,8 +12,12 @@
   image antonio normal = "images/antonio/normal.png"
   image mia normal = "images/mia/normal.png"
   image permione normal = "images/permione/normal.png"
+  image bugs normal = "images/extra_bugs/normal.png"
+  image ladybug normal = "images/extra_bugs/ladybug.png"
 
   image black = Solid("#000")
+
+  define config.layers =['master', 'transient', 'screens', 'overlay','layer2','layer3']
 
 init python:
   def antonio_voice(event, interact=True, **kwargs):
@@ -171,6 +175,19 @@ label Day_3:
   with fade
   #TODO add random bugs in to scene
   play music "music/tracks/1_chill_pop.wav" volume 0.5
+  show ladybug normal at truecenter:
+    zoom 0.5
+    xzoom -1.0
+    xalign 0.4
+  show ladybug normal onlayer layer2 at truecenter:
+    zoom 0.5
+    xzoom -1.0
+    xalign 0.4
+    yalign 0.3
+  show ladybug normal onlayer layer3 at truecenter:
+    zoom 0.5
+    xzoom -1.0
+    xalign 0.55
 
   "The ladybug fan club hovers over you!!"
 
@@ -203,7 +220,9 @@ label Day_3:
   
   \"IF YOU ARE PARTICIPATING, PLEASE MAKE YOUR WAY OVER TO THE TRACK\""""
   stop sound
-
+  hide ladybug normal 
+  hide ladybug normal onlayer layer2
+  hide ladybug normal onlayer layer3
   show antonio normal
   antonio """\"FOCUS UP [player_name]!\"
 
@@ -212,8 +231,10 @@ label Day_3:
   \"LETS GOO\""""
   hide antonio normal
 
+
   show bg track
   with fade
+  show bugs normal
 
   "You arrive at the 100 metre sprint."
 
@@ -251,6 +272,7 @@ label Day_3:
 
   \"GOOOOO!!!!\""""
 
+  hide bugs normal
   stop music
   play music "music/tracks/8_cinematic.wav" volume 1.2
   
@@ -264,6 +286,7 @@ label Day_3:
 
   hide mia normal
   hide permione normal
+  show bugs normal
 
   play sound "music/sfx/human/running_on_the_gravel.mp3" volume 0.25
   mc "\*sweats profusely\*"
@@ -292,9 +315,11 @@ label Day_3:
 
   \"HOMER THE HORNET HAS FALLEN FOR THE DELICIOUS SCENT AND HAS COMPLETELY GONE OFF THE TRACKS\"
 
-  \"NO NONO !!! THE BEES ARE FOLLOWING\"
+  \"NO NONO !!! THE BEES ARE FOLLOWING\""""
 
-  \"THEY MUST BE TUNNEL VISIONING WITH HOW FAST THEYRE GOING\"
+  hide bugs normal with moveoutright
+
+  announcer """\"THEY MUST BE TUNNEL VISIONING WITH HOW FAST THEYRE GOING\"
 
   \"EVEN THE SPIDERS HAVE NOW HEADED TOWARDS THE CAKE\"
 
