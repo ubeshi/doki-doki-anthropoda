@@ -160,7 +160,7 @@ label Day_4 :
     antonio "\"LETS GO LETS GO!!\""
     hide antonio normal
     scene bg college_outside
-    play music "music/tracks/9_emotional_piano" volume 0.5
+    play music "music/tracks/9_emotional_piano.wav" volume 0.5
     scene bg college_outside
     scene bg flower_bed
     scene bg other_dorm
@@ -181,7 +181,7 @@ label Day_4 :
 
     \"Come hereee\""""
     hide permione normal
-    play music "music/tracks/7_emotional_piano" volume 0.5
+    play music "music/tracks/7_emotional_piano.wav" volume 0.5
     scene bg college_outside
     scene bg tunnel
     scene bg track

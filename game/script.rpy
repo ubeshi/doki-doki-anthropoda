@@ -91,9 +91,9 @@ define announcement = Character("Announcement")
 define announcer = Character ("Announcer", callback = announcer_voice)
 
 label start:
-  jump Day_1
-  jump Day_2
-  jump Day_3
-  jump Day_4
+  call Day_1
+  call Day_2
+  call Day_3
+  call Day_4
 
   return
