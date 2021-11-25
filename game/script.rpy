@@ -24,7 +24,7 @@ init python:
     if not interact:
       return 
     if event == "begin":
-      renpy.sound.play("music/sfx/human/man_gargle1.mp3", relative_volume = 0.25)
+      renpy.sound.play("music/sfx/human/man_gargle1.mp3", relative_volume = 0.15)
     elif event == "end":
       renpy.sound.stop()
 
@@ -84,6 +84,9 @@ define internal_dialogue = Character("Internal Dialogue")
 define pillbug = Character("Unknown Pillbug")
 define unknown = Character("Unknown")
 define you = Character("You")
+
+# day2 specific characters
+define teacher = Character("Teacher")
 
 # day3 specific characters
 define ladybugs = Character("Ladybug Fan Club", callback = ladybugs_voice)

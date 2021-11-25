@@ -1,42 +1,59 @@
 label Day_3:
   scene black
-  play music "music/sfx/human/snoring.mp3" volume 0.5
-  
-  mc "Zzzz....ZZzzz...."
+  play sound "music/sfx/human/snoring.mp3" volume 0.5
 
-  play music "music/sfx/magic01/strange_bell.mp3" volume 0.5
+  "Zzz... ZZzz..."
 
-  mc "!!!"
-  
-  play music "music/sfx/human/walking_in_a_house1.mp3" volume 0.5
+  play sound "music/sfx/magic01/strange_bell.mp3" volume 0.5
+
+  "!!!"
+
+  play sound "music/sfx/human/walking_in_a_house1.mp3" volume 0.5
   scene bg room
   show antonio normal
 
-  antonio "\"RISE N SHINE MY BOY!\""
-  
-  stop music
+  antonio "\"{b}Rise 'n shine, my boy{/b}!\""
+
   play music "music/tracks/7_emotional_piano.wav" volume 0.5
 
-  #TODO add in choice names
-  antonio """\"You came back pretty late last night with…(insert yesterdays choice)\"
+  if Choice == "Permione":
+    antonio """
+    \"You came back pretty late last night with Permione.\"
 
-  \"I thought you mightve been interested in (insert other choice name) instead…\"
+    \"I thought you might've been interested in Mia instead.\"
+    """
   
-  \"Maybe you can decide who you want to take to the cricket club today at the track and field event!\"
+  if Choice == "Mia":
+    antonio """
+    \"You came back pretty late last night with Mia.\"
 
-  \"OH! Don’t forget that the ladybug fan club signed you up for the 100m sprint!\"
+    \"I thought you might've been interested in Permione instead.\"
+    """
+ 
+  antonio """
+  \"Maybe you can decide who you want to take to the Cricket Club today at the track and field event!\"
 
-  \"There’ll be some tough competition but they dont stand a chance against you!!\""""
+  \"Oh! Don't forget that the ladybug fan club signed you up for the 100m sprint!\"
 
-  mc """\"Thanks...\"
+  \"There'll be some tough competition, but they don't stand a chance against you!\"
+  """
 
-  I can’t remember much from last night after listening to music with (insert yesterdays choice)...
+  mc """
+  \"Thanks...\"
+  """
 
-  I wonder how I got back to my dorm….
+  if Choice == "Permione":
+    "I can't remember much from last night after hanging out with Permione."
+  if Choice == "Mia":
+    "I can't remember much from last night after hanging out with Mia."
+    
+  """
+  I wonder how I got back to my dorm.
 
-  Best to focus on the sprint later today,
+  Best to focus on the sprint later today.
 
-  I better start stretching if I'm going to stand a chance with my soft lumps and juicy body."""
+  I better start stretching if I'm going to stand a chance, with my soft lumps and juicy body.
+  """
 
   hide antonio normal
   stop music
@@ -58,88 +75,85 @@ label Day_3:
     xzoom -1.0
     xalign 0.55
 
-  "The ladybug fan club hovers over you!!"
+  "The ladybug fan club hovers over you!"
 
-  ladybugs """\"goooOOOOOO [player_name]!!! You're the most handsomest bug on campus!\"
+  ladybugs """\"GoooOOOOOO [player_name!u]! You're the most handsomest bug on campus!\"
 
-  \"You're going to kill the 100m Sprint!\"
+  \"You're going to kill the 100m sprint!\"
 
-  \"WE LOVE YOU\"
+  \"We love you!\"
 
-  \"WE WILL BE WAITING FOR YOU AT THE FINISH LINE <3\"
+  \"We will be waiting for you at the finish line ❤️!\"
 
-  \"HEHEHEHHE\""""
+  \"HEHEHEHHE.\""""
   
-  mc """\"Thanks ladies...\"
+  mc """\"Thanks ladies.\"
   
-  \"I'll do my best\"
+  \"I'll do my best!\"
   
-  I wonder where Mia and Permione are…
+  I wonder where Mia and Permione are.
 
-  So many things are happening
+  So many things are happening,
   
-  How am I going to choose which one to ask to go to cricket club…
+  How am I going to choose which one to ask to go to Cricket Club?
   
   Will they even want to go with me? 
-  
-  …"""
+  """
 
   play sound "music/sfx/human/whistling2.mp3"
-  announcement """ \"THE 100M SPRINT IS BEGINNING SOON…\"
+  announcement """ \"{i}{b}The hundred meter sprint is beginning soon!{/b}{/i}\"
   
-  \"IF YOU ARE PARTICIPATING, PLEASE MAKE YOUR WAY OVER TO THE TRACK\""""
+  \"{i}{b}If you are participating, please make your way over to the track.{b}{/i}\""""
   stop sound
   hide ladybug normal 
   hide ladybug normal onlayer layer2
   hide ladybug normal onlayer layer3
   show antonio normal
-  antonio """\"FOCUS UP [player_name]!\"
+  antonio """\"FOCUS UP [player_name!u]!\"
 
-  \"WE GOTTA GET YOU TO THE RACE OR YOU'LL BE DISQUALIFIED!\"
+  \"We gotta get you to the race, or you'll be disqualified!\"
 
-  \"LETS GOO\""""
+  \"Let's go!\""""
   hide antonio normal
-
-
   show bg track
   with fade
   show bugs normal
 
-  "You arrive at the 100 metre sprint."
+  "You arrive at the 100 meter sprint."
 
-  mc """\"What the fuck is this\"
+  mc """\"What the fuck is this?\"
 
-  \"How do I compete with the hornet jocks, the bees, and a spider!!??\""""
+  \"How do I compete with the hornet jocks, the bees... and a spider!?\""""
 
   show antonio normal
-  antonio """\"HMM…THIS IS GOING TO BE  A TOUGH ONE BUT IF YOU DONT BELIEVE YOU DONT SUCCEEED\"
+  antonio """\"Hmm. This is going to be a tough one! But if you don't believe {b}you don't succeed{/b}!\"
 
-  \"They may be fast but I’m sure you will pull through\"
+  \"They may be fast, but I'm sure you will pull through.\"
 
-  \"Look! I see Mia and Permione over there\"
+  \"Look! I see Mia and Permione over there.\"
 
-  \"I’ll go cheer you on with them\"
+  \"I'll go cheer you on with them!\"
 
-  \"YOU GOT THIS\""""
+  \"You got this!\""""
   hide antonio normal
 
-  mc "Guess theres nothing to do but try..."
+  mc "Guess there's nothing to do but try..."
 
-  announcer """\"WELCOME WELCOME\"
+  announcer """\"{b}Welcome, welcome!{/b}\"
 
-  \"THIS IS THE ANNUAL TRACK MEET AND WE BEGIN WITH A 100M SPRINT\"
+  \"{i}{b}This is the annual track meet! We will begin with a hundred meter sprint!{/b}{/i}\"
 
-  \"WE HAVE GOT THE GREATEST VARIETY OF BUGS IN THIS RACE THAN EVER BEFORE\"
+  \"{i}{b}We have got a greater variety of bugs in this race, than ever before!{/b}{/i}\"
 
-  \"ARE WE READY RACERS?\"
+  \"{i}{b}Are we ready racers?{/b}{/i}\"
 
-  \"ON\"
+  \"{i}{b}On!{/b}{/i}\"
 
-  \"YOUR\"
+  \"{i}{b}Your!{/b}{/i}\"
 
-  \"MARKS\"
+  \"{i}{b}Mark!{/b}{/i}\"
 
-  \"GOOOOO!!!!\""""
+  \"{i}{b}GOOOOO!{/b}{/i}\""""
 
   hide bugs normal
   stop music
@@ -147,7 +161,7 @@ label Day_3:
   
   show mia normal at topright:
     zoom 0.5
-  mia "\"GO [player_name]! YOU CAN DO IT\""
+  mia "\"GO [player_name!u]! YOU CAN DO IT!\""
 
   show permione normal at left:
     xzoom -1.0
@@ -158,61 +172,61 @@ label Day_3:
   show bugs normal
 
   play sound "music/sfx/human/running_on_the_gravel.mp3" volume 0.25
-  mc "\*sweats profusely\*"
+  "I'm sweating profusely."
   
   play sound "music/sfx/human/running_on_the_gravel.mp3" volume 0.25
-  mc "I’m already using 100\% of my power and I'm…..DEADLAST?!?!"
+  "I'm already using 100\% of my power, and I'm... {b}dead last{/b}?!"
   
   play sound "music/sfx/human/running_on_the_gravel.mp3" volume 0.25
-  mc "I have to keep going…"
+  "I have to keep going..."
   stop sound
 
-  announcer """\"HOMER THE HORNET JOCK IS IN THE LEAD\"
+  announcer """\"{i}{b}Homer the hornet jock is in the lead!{/b}{/i}\"
 
-  \"FOLLOWING CLOSE BEHIND IS BARRY BEE\"
+  \"{i}{b}Following close behind is Barry Bee!{/b}{/i}\"
 
-  \"[player_name] IS BEGINNING TO FALL BEHIND THE REST OF THE COMPETITION!!\""""
+  \"{i}{b}[player_name] is beginning to fall behind the rest of the competition!{/b}{/i}\""""
   
   voice("music/sfx/human/surprising_girl.mp3")
-  announcer """…!!!
+  announcer """
 
-  \"WHATS THIS??\"
+  \"{i}{b}What's this?{/b}{/i}\"
 
-  \"IT APPEARS SOMEONE HAS DROPPED A SLICE OF RED VELVET CAKE ON THE SIDE OF THE TRACK\"
+  \"{i}{b}It appears someone has dropped a slice of red velvet cake on the side of the tracks!{/b}{/i}\"
 
-  \"OH NO!!\"
+  \"{i}{b}Oh no!{/b}{/i}\"
 
-  \"HOMER THE HORNET HAS FALLEN FOR THE DELICIOUS SCENT AND HAS COMPLETELY GONE OFF THE TRACKS\"
+  \"{i}{b}Homer the hornet has fallen for the delicious scent, and has completely gone off the tracks!{/b}{/i}\"
 
-  \"NO NONO !!! THE BEES ARE FOLLOWING\""""
+  \"{i}{b}No! Now the bees are falling for it as well!{/b}{/i}\""""
 
   hide bugs normal with moveoutright
 
-  announcer """\"THEY MUST BE TUNNEL VISIONING WITH HOW FAST THEYRE GOING\"
+  announcer """\"{i}{b}They must be tunnel visioning with how fast they're going!{/b}{/i}\"
 
-  \"EVEN THE SPIDERS HAVE NOW HEADED TOWARDS THE CAKE\"
+  \"{i}{b}Even the spiders have now headed towards the cake!{/b}{/i}\"
 
-  \"WHATS THIS….?!?!!\"
+  \"{i}{b}Wait, what's this?{/b}{/i}\"
 
-  \"[player_name] HAS SPRINTED RIGHT PAST THE VELVET CAKE \"
+  \"{i}{b}[player_name] has sprinted right past the velvet cake!{/b}{/i}\"
 
-  \"HES HEADED TOWARDS THE FINISH LINE\"
+  \"{i}{b}He's headed towards the finish line!{/b}{/i}\"
 
-  \"HE HAS OVERTAKEN ALL HIS COMPETITION AND IS ABOUT TO FINISH THE SPRINT\""""
+  \"{i}{b}He has overtaken all his competition, and about the finish the sprint!{/b}{/i}\""""
 
   show antonio normal
-  antonio """\"RUN [player_name] RUN!!!!\"
+  antonio """\"RUN [player_name!u], RUN!\"
 
-  \"LIKE YOUR LIFE DEPENDS ON IT!!!\"
+  \"LIKE YOUR LIFE DEPENDS ON IT!\"
 
-  \"THIS IS YOUR TIME TO SHINE BABY!\""""
+  \"THIS IS YOUR TIME TO SHINE, BABY!\""""
   hide antonio normal
   
   play sound "music/sfx/human/running_on_the_gravel.mp3" volume 0.25
-  mc "\"AHHHHH!!!!\""
+  mc "\"Ahh!\""
   stop sound
 
-  announcer "\"OH MY GOD!!! [player_name] HAS FINISHED IN FIRST PLACE!!!!!!\""
+  announcer "\"{i}{b}Oh my god! [player_name] has finished in first place!{/b}{/i}\""
 
   stop music
   play music "music/tracks/10_emotional_piano.wav"
@@ -222,49 +236,67 @@ label Day_3:
 
   show antonio normal at center:
     xalign 0.80
-  antonio "\"YOU'RE BLOODY AMAZING!\""
+  antonio "\"You're bloody amazing!\""
 
   show mia normal at topright :
     zoom 0.5
     xalign 1.1
-  mia "\"OH MY GOSH!!! WOOO!\""
+  mia "\"Oh my gosh! Woo!\""
 
   show permione normal at left:
     xzoom -1.0
     xalign -0.1
-  permione "\"YES BABY I KNEW YOU COULD DO IT!\""
+  permione "\"Yes baby, I knew you could do it!\""
 
-  ladybugs """\"[player_name]! [player_name]! [player_name]!\"
+  show ladybug normal at truecenter:
+    zoom 0.5
+    xzoom -1.0
+    xalign 0.4
+  show ladybug normal onlayer layer2 at truecenter:
+    zoom 0.5
+    xzoom -1.0
+    xalign 0.4
+    yalign 0.3
+  show ladybug normal onlayer layer3 at truecenter:
+    zoom 0.5
+    xzoom -1.0
+    xalign 0.55
+  
+  ladybugs """\"[player_name!u]! [player_name!u]! [player_name!u]!\"
 
   \"WE KNEW YOU COULD DO IT!\"
 
-  \"WE LOVE YOU!!!\"
+  \"WE LOVE YOU!\"
 
-  \"AHHHH!\""""
+  \"AHH!\""""
 
-  mc """\"OH MY GOD! How did this happen?!?!\"
+  mc """\"Oh my god! How did this happen?!\"
 
-  \"I’ve never won anything before this is insane!\""""
+  \"I've never won anything before! This is insane!\""""
 
-  permione """\"[player_name]! You were amazing! I knew if anyone could do it you could!!!\"
+  permione """\"[player_name]! You were amazing! I knew if anyone could do it, you could!\"
 
-  \"We HAVE to celebrate together ;)\"
+  \"We {i}have{/i} to celebrate together 😉.\"
 
-  \"Come watch my long jump event and after we can go celebrate just us?\""""
+  \"Come watch my long jump event, and after we can go celebrate - just us.\""""
 
-  mia """\"WAHHHHHHH \*sniffles\* Im so happy for you! \"
+  mia """\"WAHHH! \*sniffles\* I'm so happy for you!\"
 
   \"Congratulations!\"
 
-  \"I wish I was as good as you…\"
+  \"I wish I was as good as you...\"
 
-  \"I came dead last in my discus event.. \*sniffles\*\""""
+  \"I came dead last in my discus event... \*sniffles\*\""""
+
+  hide ladybug normal 
+  hide ladybug normal onlayer layer2
+  hide ladybug normal onlayer layer3
 
   menu:
     "Who should I go with?"
 
     #TODO add in choice variable
-    "Go to Permione's Long Jump Event.":
+    "Go to Permione's long jump Event.":
       mc """\"I'd love to watch your event Permione!\"
 
       Thanks Mia, I'll catch you later!\""""
@@ -289,19 +321,21 @@ label Day_3_Permione:
 
   permione """\"I'm so glad to have you cheering for me at my event!\"
 
-  \"I hope I can win first place just like you \:\)\""""
+  \"I hope I can win first place, just like you 😉.\""""
 
   mc """\"I'm sure you'll do great!\"
 
   \"You're Permione! You're always good at everything you do!\""""
 
   play sound "music/sfx/human/kiss1.mp3"
-  permione "\"Make sure to keep you eyes on me \;\)\""
+  permione "\"Make sure to keep you eyes on me 😘.\""
   stop sound
 
-  announcer """\"WELCOME TO THE LONG JUMP EVENT!!\"
+  announcer """\"{i}{b}Welcome to the long jump event!{/b}{/i}\"
   
-  \"FIRST UP IS PERMIONE...\""""
+  \"{i}{b}First up is Permione!{/b}{/i}\""""
+
+  "..."
 
   stop music
   hide permione normal
@@ -312,27 +346,32 @@ label Day_3_Permione:
 
   mc """\"Permione, you amaze me every time!\"
 
-  \"I knew you were going to win 1st place!\""""
+  \"I knew you were going to win first place!\""""
 
   permione """\"Thanks [player_name]!\"
 
-  \"You’re not so bad yourself Mr.100m sprint!\"
+  \"You're not so bad yourself, Mr. Hundred-Meter Sprint!\"
 
-  \"I’m just glad you're celebrating with me and not anyone else!\""""
+  \"I'm just glad you're celebrating with me, and not anyone else!\""""
 
-  mc "\"Ahaha well actually I’ve been meaning to ask you something…\""
+  mc "\"Haha, well actually... I've been meaning to ask you something.\""
   
   play sound "music/sfx/human/heartbeats.mp3"
-  mc """\"Do you want to go to the cricket club with me tomorrow…\"
+  mc """\"Do you want to go to the Cricket Club with me tomorrow,\"
   
-  \"as my date?\""""
+  \"As my date?\""""
   stop sound
+
+  play audio "music/sfx/magic01/chorus_of_angels1.mp3" volume 0.25
 
   permione """\"I thought you'd never ask!\"
 
   \"I'd LOVE to go with you!\""""
 
-  play audio "music/sfx/magic01/chorus_of_angels1.mp3" volume 0.25
+  hide permione normal
+  scene black
+
+  "..."
 
   return
 
@@ -348,11 +387,11 @@ label Day_3_Mia:
   mia "\*sniffles\*"
   stop sound
 
-  mc """\"Oh Mia I just got lucky!\"
+  mc """\"Oh Mia, I just got lucky!\"
 
-  \"I was dead last until someone dropped that piece of cake!\"
+  \"I was dead last until someone dropped that piece of cake.\"
 
-  \"Who cares about Track and Field anyways!\"
+  \"Who cares about track and field anyways!\"
 
   \"It doesn't define you!\"
 
@@ -362,11 +401,11 @@ label Day_3_Mia:
   mia "\*sniffles\*"
   stop sound
 
-  mia """\"Youre right!\"
+  mia """\"Thanks [player_name].\"
 
-  \"Talking to you always makes me feel better!\""""
+  \"Talking to you always makes me feel better.\""""
 
-  mc "\"Lets go to the flower field to take your mind off of it!\""
+  mc "\"Let's go to the flower field to take your mind off of it.\""
 
   hide mia normal
   scene bg flower_bed
@@ -375,26 +414,31 @@ label Day_3_Mia:
   show mia normal at top:
     zoom 0.5
 
-  mia """\"You are so sweet for cheering me up by bringing me to the flower field...\"
+  mia """\"You are so sweet for cheering me up by bringing me to the flower field.\"
 
   \"Thank you [player_name]!\""""
 
-  mc """\"Anything for you Mia…\"
+  mc """\"Anything for you Mia.\"
   
-  \"I’ve actually been meaning to ask you something…\""""
+  \"I've actually been meaning to ask you something.\""""
 
   play sound "music/sfx/human/heartbeats.mp3"
-  mc """\"Do you want to go to the cricket club with me tomorrow… \"
+  mc """\"Do you want to go to the Cricket Club with me tomorrow, \"
   
-  \"as my date?\""""
+  \"As my date?\""""
   stop sound
 
-  mia """\"Here I thought that you only saw me as a sister!\"
+  mia """\"And here I thought that you only saw me as a sister!\"
 
   \"I would love to go as your date!\""""
 
   play audio "music/sfx/magic01/chorus_of_angels1.mp3" volume 0.25
 
   mia "\"Hehe!\""
+
+  hide mia normal
+  scene black
+
+  "..."
 
   return

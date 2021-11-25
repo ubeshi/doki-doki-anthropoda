@@ -3,105 +3,90 @@
   show antonio normal
   antonio "\"92, 93, 94!\""
   hide antonio normal
-  scene bg room
-  show antonio normal
   antonio "\"95, 96, 97!\""
-  hide antonio normal
-  scene bg room
   show antonio normal
   antonio "\"98, 99, 100!\""
   mc "\"Zzzz... huh?\""
-  mc "I am so dizzy, how did I make it back to the dorm..."
-  antonio "\"98, 99, 100!\""
-  antonio "\"Oh you're awake!\""
-  antonio "\"YOU were OUT COLD! I almost thought I lost you.\""
-  antonio "\"You got all your limbs? ... Damn all 16? You'd do fine without a few\""
-  antonio "\"I remember fighting alongside 4 armed Jack, Antman and Bent leg Billy\""
-  antonio "\"BATTLE SCARS IS WHAT MAKES YOU A MAN!!!\""
+  
+  "I am so dizzy, how did I make it back to the dorm..."
+  antonio "\"198, 199, 200!\""
+  antonio "\"Oh, you're awake!\""
+  antonio "\"You were out {b}cold{/b}! I almost thought I lost you.\""
+  antonio "\"You got all your limbs? Damn, all 16? You'd do fine without a few.\""
+  antonio "\"I remember fighting alongside Four-armed Jack, Antman, and Bent-leg Billy.\""
+  antonio "\"{b}Battle scars is what makes you a man!{b}\""
   mc "\"What... happened yesterday?\""
   antonio "\"Who knows? Did you fight someone mano-a-mano?\""
-  antonio "\"I just saw you  laying there twitching on my 10km run\""
-  antonio "\"So I thought... Extra weight training!!!\""
-  mc "\"... Thanks\""
+  antonio "\"I just saw you laying there, twitching on my 10km run.\""
+  antonio "\"So I thought, extra weight training!\""
+  mc "\"...thanks.\""
 
   if Mia_points > Permione_points:
-    mc "I hope Mia didn't see me on his back..."
-    mc "So embarassing...."
+    "I hope Mia didn't see me on his back."
+    "So embarassing."
   elif Permione_points >= Mia_points:
-    mc "I hope Permione didn't see me on his back..."
-    mc "So embarassing...."
+    "I hope Permione didn't see me on his back."
+    "So embarassing."
 
   antonio "\"Boy! You better sober up!\""
-  antonio "\"There's a worse war incoming today!!!\""
-  mc "\"WAR??\""
-  antonio "\"Yea!! I hear even if you train everyday barely anyone can make it through without a head injury\""
+  antonio "\"There's a worse war incoming today!\""
+  mc "\"War?\""
+  antonio "\"Yeah! I heard that barely anyone can make it through without a head injury!\""
   antonio "\"Brace yourself...\""
   antonio "\"...\""
   antonio "\"....\""
   antonio "\"...\""
   antonio "\"It's the written exam!\""
-  mc "..."
-  antonio "..."
-  antonio "..."
+  mc "\"...\""
   antonio "\"Don't be scared brother! I got your back!\""
-  antonio "\"Psht.. Inside tip...\""
+  antonio "\"Psht... Inside tip.\""
   antonio "\"I hear they come wave after wave...\""
-  antonio "\"BUT.. if you hold on long enough\""
-  antonio "\"You will hear a bell\""
-  antonio "\"and then it'll all be over!!\""
-  mc "..."
-  mc "\"Lets... go get breakfast\""
+  antonio "\"But! If you hold on long enough,\""
+  antonio "\"You will hear a bell,\""
+  antonio "\"And then it'll all be over!\""
+  mc "\"...\""
+  mc "\"Let's go get breakfast.\""
   antonio "\"That's the spirit!\""
-  antonio "\"We need ALL THE CARBS to bulk up!\""
-  antonio "\"CHARGEEE!!!\""
+  antonio "\"We need {b}all the carbs{/b} to bulk up!\""
+  antonio "\"{b}Charge!{/b}\""
   hide antonio normal
-  mc "..."
-  mc "..."
-  scene bg college_outside
   scene bg classroom
   play music "music/tracks/3_acoustic_pop.wav" volume 0.5
-  mc "oh, There is Mia... and Permione."
-  play music "music/sfx/human/heartbeats.mp3" volume 0.5
-  mc "should I go say hi?"
+  "Oh, there is Mia... and Permione."
+  play sound "music/sfx/human/heartbeats.mp3" volume 0.5
+  "Should I go say hi?"
   play music "music/tracks/3_acoustic_pop.wav" volume 0.5
-  show mia at topright: 
+  show mia normal at topright: 
     zoom 0.5
     xalign 1.1
-  show permione at left
-  mia "\"What do you mean you never asked me to!!\""
-  mia "\"You always say you will clean up afterwards\""
-  mia "\"and then NEVER DO!\""
-  mia "\"SO I go and spend all night cleaning\""
-  mia "\"AND ALL YOU CAN SAY IS Don’t touch my stuff?\""
-  hide mia normal
-  show permione normal
+  show permione normal at left
+  mia "\"What do you mean, you never asked me to!\""
+  mia "\"You always {i}say{/i} you will clean up afterwards,\""
+  mia "\"And then you {b}never{/b} do!\""
+  mia "\"So I go and spend all night cleaning!\""
+  mia "\"And {b}all{/b} you can say is, \'Don't touch my stuff\'?\""
   permione "\"Girl, you do you.\""
-  permione "\"Don’t come crying to me when you pick up the wrong magazine… and...\""
-  permione "\"Oh is that what it is, couldn’t sleep well last night?\""
-  permione "\"Did little mothy girl have too much to think about. ;)\""
-  mia "\"YOU!!!\""
-  permione "\"Haha, how bout this\""
-  permione "\"we make a bet with the test today...\""
-  permione "\"and whoever wins listens to the other!\""
-  hide permione normal
-  show mia normal
-  mia "\"DEAL!!!\""
-  mia "\"You are goint to lose FOR SURE!\""
-  mia "\"I was top of the class!\""
-  mia "\"you are going DOWN!\""
-  play music "music/sfx/human/man_coughing.mp3" volume 0.5
-  mc "\"um.. Good morning?\""
+  permione "\"Don't come crying to me when you pick up the wrong magazine... and...\""
+  permione "\"Oh, is that what it is, couldn't sleep well last night?\""
+  permione "\"Did little mothy girl have too much to think about?\""
+  mia "\"{b}You{/b}!\""
+  permione "\"Haha, how 'bout this?\""
+  permione "\"We make a bet with the test today...\""
+  permione "\"And whoever wins listens to the other!\""
+  mia "\"Deal!\""
+  mia "\"You are going to lose for sure!\""
+  mia "\"I am at the top of the class!\""
+  mia "\"You are going down!\""
+  play sound "music/sfx/human/man_coughing.mp3" volume 0.5
+  mc "\"Um... Good morning?\""
   play music "music/tracks/3_acoustic_pop.wav" volume 0.5
-  mia "\"AHHH!\""
   hide mia normal
-  mc "..."
   show permione normal
-  permione "\"Morning [player_name] \""
+  permione "\"Morning [player_name].\""
   permione "\"Looking fine... tasty...\""
-  mc "..."
   hide permione normal
-  play music "music/sfx/daily/door_chime3.mp3" volume 0.5
-  teacher "\"OKAY CLASS FIND A SEAT AND WE WILL BEGIN\""
+  play sound "music/sfx/daily/door_chime3.mp3" volume 0.5
+  teacher "\"Okay class! Find a seat and we'll begin.\""
 
   menu:
     "Where should I sit?"
@@ -115,71 +100,74 @@
   if Choice == "Permione":
     show permione normal
     permione "\"Good luck!\""
-    permione "\"I’ll bring you somewhere spicy when we are done.\""
-    mc "..."
+    permione "\"I'll bring you somewhere spicy when we are done.\""
     hide permione normal
     scene black
-    play music "music/sfx/daily/door_chime3.mp3" volume 0.5
-    antonio "\"IM FREEEEEEE\""
+    play sound "music/sfx/daily/door_chime3.mp3" volume 0.5
+    antonio "\"I'm {b}free{/b}!\""
     scene bg college_outside
     show permione normal
     permione "\"Quick! Follow me!\""
     hide permione normal
-    mc "\" Wait for me!\""
+    mc "\"Wait for me!\""
     scene bg tunnel
-    play music "music/sfx/magic01/in_a_cave.mp3" volume 0.5
-    mc"\"Pe.. permione??\""
+    play sound "music/sfx/magic01/in_a_cave.mp3" volume 0.5
+    mc"\"Pe.. Permione?\""
     show permione normal
-    permione "\"BOO!!\""
-    permione "\"haha, look at your face\""
-    permione "\"Over here!!\""
+    permione "\"{i}Boo{/i}!\""
+    permione "\"Haha, look at your face!\""
+    permione "\"Over here!\""
     hide permione normal
-    mc "Wow, that's a very hidden entrance"
+    "Wow, that's a very hidden entrance."
     scene black
     play music "music/tracks/2_chill_beats.wav" volume 0.2
-    mc "I wonder where we are going..."
+    "I wonder where we are going..."
     play music "music/tracks/2_chill_beats.wav" volume 0.5
     scene bg club
     show permione normal
-    permione "\"loosen up!, it's not every day DJ CiciDada is here!\""
+    permione "\"Loosen up! It's not every day DJ CiciDada is here!\""
     play music "music/tracks/2_chill_beats.wav" volume 0.8
     hide permione normal
     scene black
+
+    "..."
+
   if Choice == "Mia":
     show mia normal
-    mc "\"oh uh... good morning Mia\""
-    mia "\"Ahhhh I didn’t read the magazine..\""
-    mia "\"I uh just.. Looked at the cover!\""
+    mc "\"Oh uh... good morning Mia.\""
+    mia "\"Ah, I didn't read the magazine.\""
+    mia "\"I uh, just... looked at the cover!\""
     mia "\"...\""
-    mia "\"and uh cleaned the inside. YES!\""
-    mia "\"I made sure all the pages were clean. That's it!!\""
-    mc "..."
-    mia "\"Nooo! I can explain...\""
-    play music "music/sfx/daily/door_chime3.mp3" volume 0.5
-    mia "\"WE’LL TALK AFTER!!\""
-    mia "\"GOOD LUCK! I know you’ll do well.\""
+    mia "\"And, uh, cleaned the inside. Yep!\""
+    mia "\"I made sure all the pages were clean. That's it!\""
+    mc "\"...\""
+    mia "\"No! I can explain...\""
+    play sound "music/sfx/daily/door_chime3.mp3" volume 0.5
+    mia "\"We'll talk after!\""
+    mia "\"Good luck! I know you'll do well.\""
     mia "\"You always did...!\""
     scene black
-    play music "music/sfx/daily/door_chime3.mp3" volume 0.5
-    antonio "\"IM FREEEEEEE\""
+    play sound "music/sfx/daily/door_chime3.mp3" volume 0.5
+    antonio "\"I'm {b}free{/b}!'\""
     scene bg college_outside
-    scene bg bg other_dorm
-    mia "\"and then PM complains that I shouldn’t touch her stuff\""
-    mia "\"and yells at me!\""
-    mc "..."
+    scene bg other_dorm
+    mia "\"...And then Permione complains that I shouldn't touch her stuff!\""
+    mia "\"And she yells at me!\""
     mia "\"Like... you would have cleaned up too right?\""
-    mc "nod nod"
-    mia "\"Anyways... enought about me!\""
+    mc "*nod nod*"
+    mia "\"Anyways. enough about me!\""
     mia "\"How have you been?\""
-    mia "\"I haven't heard from you ever since I cocooned....\""
-    mc "..."
-    mia "..."
-    mia "\'I'm so sorry...\""
-    mia "\"I didn't mean to bring that up...\""
-    mia "\"You are perfect the way you are!!\""
+    mia "\"I haven't heard from you ever since I cocooned...\""
+    mc "\"...\""
+    mia "\"...\""
+    mia "\'I'm so sorry.\""
+    mia "\"I didn't mean to bring that up.\""
+    mia "\"You are perfect the way you are!\""
     mia "\"...\""
     mia "\"Oh right, do you want to see some pictures I took?\""
-    mia "\"I've always wanted to show you how much I've grown\""
-    mia "\"Here and here, and this one too!!\""
+    mia "\"I've always wanted to show you how much I've grown!\""
+    mia "\"Here and here, and this one too!\""
     scene black
+
+    "..."
   return
