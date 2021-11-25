@@ -90,7 +90,9 @@ label Day_2 :
   play music "music/sfx/human/heartbeats.mp3" volume 0.5
   mc "should I go say hi?"
   play music "music/tracks/3_acoustic_pop.wav" volume 0.5
-  show mia at right zoom 0.5
+  show mia at topright: 
+    zoom 0.5
+    xalign 1.1
   show permione at left
   mia "\"What do you mean you never asked me to!!\""
   mia "\"You always say you will clean up afterwards\""
