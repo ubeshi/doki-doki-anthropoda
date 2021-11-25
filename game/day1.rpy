@@ -1,73 +1,6 @@
-init:
-  image bg room = "images/backgrounds/bg_bedroom.png"
-  image bg classroom = "images/backgrounds/bg_classroom.png"
-  image bg club = "images/backgrounds/bg_club.png"
-  image bg club_2 = "images/backgrounds/bg_club_2.png"
-  image bg college_outside = "images/backgrounds/bg_college_outside.png"
-  image bg flower_bed = "images/backgrounds/bg_flower_bed.png"
-  image bg other_dorm = "images/backgrounds/bg_other_dorm.png"
-  image bg track = "images/backgrounds/bg_track.png"
-  image bg tunnel = "images/backgrounds/bg_tunnel.jpg"
-  image bg black = Solid("#000000")
-
-  image antonio normal = "images/antonio/normal.png"
-  image mia normal = "images/mia/normal.png"
-  image permione normal = "images/permione/normal.png"
-
-init python:
-  def antonio_voice(event, interact=True, **kwargs):
-    if not interact:
-      return 
-    if event == "begin":
-      renpy.sound.play("music/sfx/human/man_gargle1.mp3", relative_volume = 0.25) 
-    elif event == "end":
-      renpy.sound.stop()
-
-  def mia_voice(event, interact=True, **kwargs):
-    if not interact:
-      return 
-    if event == "begin":
-      renpy.sound.play("music/sfx/magic01/magic_elevator.mp3", relative_volume = 0.10) 
-    elif event == "end":
-      renpy.sound.stop()
-      
-  def permione_voice(event, interact=True, **kwargs):
-    if not interact:
-      return 
-    if event == "begin":
-      renpy.sound.play("music/sfx/human/woman_gargle.mp3", relative_volume = 0.25) 
-    elif event == "end":
-      renpy.sound.stop()
-
-  def stickbug_voice(event, interact=True, **kwargs):
-    if not interact:
-      return 
-    if event == "begin":
-      renpy.sound.play("music/sfx/human/running1.mp3", relative_volume = 0.25) 
-    elif event == "end":
-      renpy.sound.stop()
-
-define mc = Character("[player_name]")
-
-define antonio_ = Character("Antonio", callback = antonio_voice)
-define mia_ = Character("Mia", callback = mia_voice)
-define permione_ = Character("Permione", callback = permione_voice)
-
-define unknown_ant = Character("Unknown Ant", callback = antonio_voice)
-define unknown_moth = Character("Unknown soft, but familiar voice", callback = mia_voice)
-define unknown_mantis = Character("Unknown Mantis", callback = permione_voice)
-define stickbug = Character("Unknown Stickbug", callback = stickbug_voice)
-
-define antonio_and_mc = Character("You and Antonio", callback = antonio_voice)
-define banana = Character("Unknown Banana Slug")
-define internal_dialogue = Character("Internal Dialogue")
-define pillbug = Character("Unknown Pillbug")
-define unknown = Character("Unknown")
-define you = Character("You")
-
 ## TODO: implement point-based game globally
 
-label day1:
+label Day_1:
 
   # Relationship Points
   $ Permione_points = 0
@@ -118,7 +51,7 @@ label day1:
 
   unknown_ant "\"My name is Antonio! Antonio Banderas.\""
 
-  antonio_ "\"Nice to meet you!\""
+  antonio "\"Nice to meet you!\""
 
   you "\"What a coincidence!\""
 
@@ -128,7 +61,7 @@ label day1:
   if not player_name:
     $ player_name = "Brother of Mia"
   
-  antonio_ "\"Nice to meet you [player_name]\""
+  antonio "\"Nice to meet you [player_name]\""
 
   mc "\"Helter skelter\""
   mc "\"Hang sorrow\""
@@ -136,13 +69,13 @@ label day1:
   mc "\"Uptails all\""
   mc "\"And a pox on the hangman\""
   
-  antonio_ "\"What's in a name? That which we call a rose\""
-  antonio_ "\"By any other name would smell as sweet;\""
-  antonio_ "\"So [player_name] would, were they not [player_name] call'd,\""
-  antonio_ "\"Retain that dear perfection which he owes\""
-  antonio_ "\"Without that title. [player_name], doff thy name,\""
-  antonio_ "\"And for that name which is no part of thee\""
-  antonio_ "\"Take all myself.\""
+  antonio "\"What's in a name? That which we call a rose\""
+  antonio "\"By any other name would smell as sweet;\""
+  antonio "\"So [player_name] would, were they not [player_name] call'd,\""
+  antonio "\"Retain that dear perfection which he owes\""
+  antonio "\"Without that title. [player_name], doff thy name,\""
+  antonio "\"And for that name which is no part of thee\""
+  antonio "\"Take all myself.\""
   
   mc "\"You got it\""
 
@@ -155,7 +88,7 @@ label day1:
 
   mc "\"Oh wow… I guess we’re staying here for the next 3 days.\""
 
-  antonio_ "\"Yes\""
+  antonio "\"Yes\""
 
   mc "\"Guess let's choose beds\""
 
@@ -169,8 +102,8 @@ label day1:
   mc "\"This means that I am still beneath your station.\""
   mc "\"I guess you could say, I am beneath you.\""
   
-  antonio_ "\"Yeah sure I guess that works.\""
-  antonio_ "\"Thanks.\""
+  antonio "\"Yeah sure I guess that works.\""
+  antonio "\"Thanks.\""
 
   mc "Antonio and I unpack our belongings and get ready to check out the campus"
 
@@ -182,13 +115,13 @@ label day1:
   mc "There’s a large crowd of people"
   mc "Guess I gotta go outside oops"
 
-  antonio_ "\"Hey! Where are you going?\""
+  antonio "\"Hey! Where are you going?\""
 
   mc "I should tell Antonio where I’m going. He looks antsy."
   mc "\"I’m going outside to see what’s going on, w-ant to come with?\""
 
-  antonio_ "\"I c-ant right now, gotta keep unpacking…\""
-  antonio_ "\"Have you seen my deodor-ant?\""
+  antonio "\"I c-ant right now, gotta keep unpacking…\""
+  antonio "\"Have you seen my deodor-ant?\""
 
   hide antonio normal
 
@@ -236,8 +169,8 @@ label day1:
   mc "\"And physically adept.\""
   mc "\"And popular.\""
 
-  permione_ "\"I’m staying at building 1231415. Make sure to come around some time and hang out.\""
-  permione_ "{i}*blushes and scurries away like a bug*{/i}"
+  permione "\"I’m staying at building 1231415. Make sure to come around some time and hang out.\""
+  permione "{i}*blushes and scurries away like a bug*{/i}"
 
   hide permione normal
 
@@ -260,9 +193,9 @@ label day1:
 
   show mia normal
 
-  mia_ "\"It's-a-me!\""
-  mia_ "\"Mia\""
-  mia_ "\"Mia Moth!\""
+  mia "\"It's-a-me!\""
+  mia "\"Mia\""
+  mia "\"Mia Moth!\""
 
   mc "Holy shit"
   mc "..."
@@ -271,27 +204,27 @@ label day1:
   mc "\"Not like a big caterpillar.\""
   mc "\"Because you’ve undergone metamorphosis.\""
 
-  mia_ "\"I have undergone metamorphosis.\""
-  mia_ "\"It will be your time soon my sweet little caterpillar friend.\""
-  mia_ "{i}*she smiles sweetly with a warmth that is equal to a hot bird egg on human concrete in a sunny state during the summer months*{/i}"
+  mia "\"I have undergone metamorphosis.\""
+  mia "\"It will be your time soon my sweet little caterpillar friend.\""
+  mia "{i}*she smiles sweetly with a warmth that is equal to a hot bird egg on human concrete in a sunny state during the summer months*{/i}"
 
   mc "\"Thanks… I really hope so\""
   mc "\"Anyways\""
   mc "\"What are you studying?\""
 
-  mia_ "\"I’m studying agricultural sciences!\""
-  mia_ "\"I was deciding between that and anthropology but since they both seem hard, I chose the lesser of two weevils.\""
+  mia "\"I’m studying agricultural sciences!\""
+  mia "\"I was deciding between that and anthropology but since they both seem hard, I chose the lesser of two weevils.\""
 
   mc "\"That's a really good one\""
 
-  mia_ "\"I’ll be studying at the library! Guess I’m a bit of a bookworm hehe\""
-  mia_ "{i}*blushes blue*{/i}"
-  mia_ "\"Come study with me if you’re free!\""
-  mia_ "\"But remember one thing…\""
-  mia_ "\"There are moths outside, ready to die for a light they crave but which is denied to them,\""
-  mia_ "\"shielded from them.\""
-  mia_ "\"Sometimes, in the midst of all I have been given, I watch the moths in us all.\""
-  mia_ "\"Everybody has a light which they think they cannot live without.\""
+  mia "\"I’ll be studying at the library! Guess I’m a bit of a bookworm hehe\""
+  mia "{i}*blushes blue*{/i}"
+  mia "\"Come study with me if you’re free!\""
+  mia "\"But remember one thing…\""
+  mia "\"There are moths outside, ready to die for a light they crave but which is denied to them,\""
+  mia "\"shielded from them.\""
+  mia "\"Sometimes, in the midst of all I have been given, I watch the moths in us all.\""
+  mia "\"Everybody has a light which they think they cannot live without.\""
 
   mc "\"Alright see you later!\""
 
@@ -333,14 +266,14 @@ label day1:
     mc "\"What’s a sultry praying mantis with a wide range of vision and antennas to smell doing at a place like this?\""
     mc "\"Just kidding you told me where you lived.\""
 
-    permione_ "\"Oh you, you’re so smart!\""
-    permione_ "\"I never caught your name…\""
+    permione "\"Oh you, you’re so smart!\""
+    permione "\"I never caught your name…\""
 
     mc "\"My name is [player_name]\""
 
-    permione_ "\"Wow that’s an awesome name. Whoever named you should be so proud.\""
-    permione_ "\"So\""
-    permione_ "\"Proud\""
+    permione "\"Wow that’s an awesome name. Whoever named you should be so proud.\""
+    permione "\"So\""
+    permione "\"Proud\""
 
     mc "\"Anyways, what do you want to do?\""
     mc "\"I’m free all day!\""
@@ -348,14 +281,14 @@ label day1:
     stop music
     play music "music/tracks/8_cinematic.wav" volume 0.5
 
-    permione_ "\"Did you ever hear the tragedy of Dark Pit The Wet?\""
-    permione_ "\"I thought not.\""
-    permione_ "\"It’s not a story the Anthropoda would tell you.\""
-    permione_ "\"It’s a Mantis legend.\""
-    permione_ "\"Dark Pit The Wet was a dark and wet tunnel,\""
-    permione_ "\"So dark and wet and so still it could use the damp to influence the fungi to create life…\""
-    permione_ "\"It had such a knowledge of the dark side that it could even keep the ones he cared about from dying.\""
-    permione_ "\"The dark side of the \""
+    permione "\"Did you ever hear the tragedy of Dark Pit The Wet?\""
+    permione "\"I thought not.\""
+    permione "\"It’s not a story the Anthropoda would tell you.\""
+    permione "\"It’s a Mantis legend.\""
+    permione "\"Dark Pit The Wet was a dark and wet tunnel,\""
+    permione "\"So dark and wet and so still it could use the damp to influence the fungi to create life…\""
+    permione "\"It had such a knowledge of the dark side that it could even keep the ones he cared about from dying.\""
+    permione "\"The dark side of the \""
 
     mc "\"Alright let's go check it out then\""
     mc "..."
@@ -374,8 +307,8 @@ label day1:
     mc "We're here"
     mc "My eruciform body is quite damp."
 
-    permione_ "\"Alright we’re here!\""
-    permione_ "\"Let’s go check out this tunnel. I’m sure there’s going to be something funny inside.\""
+    permione "\"Alright we’re here!\""
+    permione "\"Let’s go check out this tunnel. I’m sure there’s going to be something funny inside.\""
     
     mc "\"I sure hope so Permione.\""
     mc "\"I sure hope so.\""
@@ -392,18 +325,18 @@ label day1:
     mc "\"AAAAAAAAAAAAAAAAAA\""
     mc "\"Ooooooooooooooo\""
 
-    permione_ "\"Don't worry, it's just a pill bug.\""
-    permione_ "\"Did you know that pill bugs breathe through gills and require moist environments to breathe?\""
-    permione_ "\"However, they cannot survive being submerged in water.\""
+    permione "\"Don't worry, it's just a pill bug.\""
+    permione "\"Did you know that pill bugs breathe through gills and require moist environments to breathe?\""
+    permione "\"However, they cannot survive being submerged in water.\""
 
     mc "\"Thanks for the fascinating bug fact! That helped calm me down a bit.\""
     mc "\"How did you know that?\""
 
-    permione_ "\"My father was a pill bug.\""
+    permione "\"My father was a pill bug.\""
     
     mc "\"That must have been tough, huh.\""
 
-    permione_ "\"It was.\""
+    permione "\"It was.\""
 
     mc "\"Well… If you ever want to talk or need a helping mandible\""
     mc "\"Let me know.\""
@@ -411,8 +344,8 @@ label day1:
     stop music
     play music "music/tracks/9_emotional_piano.wav" volume 0.5
 
-    permione_ "{i}*Blushes blue*{/i}"
-    permione_ "\"Thank you...\""
+    permione "{i}*Blushes blue*{/i}"
+    permione "\"Thank you...\""
 
     mc "..."
     mc "We walked around the tunnel for a long time."
@@ -474,7 +407,7 @@ label day1:
     \"Just kidding you told me where you were going.\"
     """
 
-    mia_ """
+    mia """
     \"Oh [player_name], you're being silly again.\"
 
     \"You little silly guy.\"
@@ -484,7 +417,7 @@ label day1:
 
     mc "\"What are you studying\""
 
-    mia_ """
+    mia """
     \"I’m getting prepared for my first exam on Electral Relations in Anthropoda\"
 
     ...
@@ -498,7 +431,7 @@ label day1:
     \"Can you teach me?\"
     """
 
-    mia_ """
+    mia """
     ...
 
     \"If you'd like\"
@@ -514,7 +447,7 @@ label day1:
     \"I’m glad you underwent metamorphosis before me\"
     """
 
-    mia_ """
+    mia """
     \"Hell yeah brother\"
 
     \"Want to try it out?\"
@@ -522,7 +455,7 @@ label day1:
 
     mc "\"What\""
 
-    mia_ "\"Let's go try something outside\""
+    mia "\"Let's go try something outside\""
 
     mc """
     Que pasa?
@@ -534,7 +467,7 @@ label day1:
     Nosotros salimos.
     """
 
-    mia_ """
+    mia """
     \"Want to try flying?\"
     
     \"I’ll let you sit on my back like Falkor\"
@@ -592,7 +525,7 @@ label day1:
     …
     """
 
-    mia_ "\"How was that my brother?\""
+    mia "\"How was that my brother?\""
 
     mc """
     \"When I rode your back and flew the skies\"
@@ -602,7 +535,7 @@ label day1:
     \"Like a mam-moth\"
     """
 
-    mia_ """
+    mia """
     \"Yeah well\"
 
     \"You don’t see many moths fly like me from back home\"
@@ -610,7 +543,7 @@ label day1:
 
     mc "\"Yeah not back home in Moth-erland\""
 
-    mia_ """
+    mia """
     \"That was so fun!\"
 
     \"We should do this again sometime.\"
@@ -624,15 +557,15 @@ label day1:
     \"Thanks Mia\"
     """
     
-    mia_ """
+    mia """
     \"I have to scurry soon\"
 
     \"I also have to study Mothmatics\"
     """
 
-    mia_ "\"No problem sister\""
+    mia "\"No problem sister\""
 
-    mia_ "{i}*Blushes blue*{/i}"
+    mia "{i}*Blushes blue*{/i}"
 
     hide mia normal
 

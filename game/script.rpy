@@ -24,7 +24,7 @@ init python:
     if not interact:
       return 
     if event == "begin":
-      renpy.sound.play("music/sfx/human/man_gargle1.mp3", relative_volume = 0.25) 
+      renpy.sound.play("music/sfx/human/man_gargle1.mp3", relative_volume = 0.25)
     elif event == "end":
       renpy.sound.stop()
 
@@ -32,7 +32,7 @@ init python:
     if not interact:
       return 
     if event == "begin":
-      renpy.sound.play("music/sfx/magic01/unknown_animal2.mp3", relative_volume = 0.20) 
+      renpy.sound.play("music/sfx/magic01/unknown_animal2.mp3", relative_volume = 0.20)
     elif event == "end":
       renpy.sound.stop()
 
@@ -40,7 +40,15 @@ init python:
     if not interact:
       return 
     if event == "begin":
-      renpy.sound.play("music/sfx/human/woman_gargle.mp3", relative_volume = 0.25) 
+      renpy.sound.play("music/sfx/human/woman_gargle.mp3", relative_volume = 0.25)
+    elif event == "end":
+      renpy.sound.stop()
+
+  def stickbug_voice(event, interact=True, **kwargs):
+    if not interact:
+      return 
+    if event == "begin":
+      renpy.sound.play("music/sfx/human/running1.mp3", relative_volume = 0.25)
     elif event == "end":
       renpy.sound.stop()
 
@@ -48,7 +56,7 @@ init python:
     if not interact:
       return 
     if event == "begin":
-      renpy.sound.play("music/sfx/human/girl_voice1.mp3", relative_volume = 0.25) 
+      renpy.sound.play("music/sfx/human/girl_voice1.mp3", relative_volume = 0.25)
     elif event == "end":
       renpy.sound.stop()
 
@@ -56,28 +64,32 @@ init python:
     if not interact:
       return 
     if event == "begin":
-      renpy.sound.play("music/sfx/human/hiccup.mp3", relative_volume = 0.25) 
-    elif event == "end":
-      renpy.sound.stop()
+      renpy.sound.play("music/sfx/human/hiccup.mp3", relative_volume = 0.25)
 
 define mc = Character("[player_name]")
 define antonio = Character("Antonio", callback = antonio_voice)
 define mia = Character("Mia", callback = mia_voice)
 define permione = Character("Permione", callback = permione_voice)
+
+# day1 specific characters
+define unknown_ant = Character("Unknown Ant", callback = antonio_voice)
+define unknown_moth = Character("Unknown soft, but familiar voice", callback = mia_voice)
+define unknown_mantis = Character("Unknown Mantis", callback = permione_voice)
+define stickbug = Character("Unknown Stickbug", callback = stickbug_voice)
+define antonio_and_mc = Character("You and Antonio", callback = antonio_voice)
+define banana = Character("Unknown Banana Slug")
+define internal_dialogue = Character("Internal Dialogue")
+define pillbug = Character("Unknown Pillbug")
+define unknown = Character("Unknown")
+define you = Character("You")
+
+# day3 specific characters
 define ladybugs = Character("Ladybug Fan Club", callback = ladybugs_voice)
 define announcement = Character("Announcement")
 define announcer = Character ("Announcer", callback = announcer_voice)
 
 label start:
-
-  play music "music/tracks/1_chill_pop.wav" volume 0.5
-  scene bg room
-  show antonio normal
-
-  $ player_name = renpy.input("What is your name, Magical Boy?")
-  $ player_name = player_name.strip()
-  hide antonio normal
-
+  jump Day_1
   jump Day_2
   jump Day_3
   jump Day_4
