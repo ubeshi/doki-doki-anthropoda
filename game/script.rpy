@@ -65,6 +65,8 @@ init python:
       return 
     if event == "begin":
       renpy.sound.play("music/sfx/human/hiccup.mp3", relative_volume = 0.25)
+    elif event == "end":
+      renpy.sound.stop()
 
 define mc = Character("[player_name]")
 define antonio = Character("Antonio", callback = antonio_voice)
