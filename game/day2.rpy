@@ -47,14 +47,11 @@ label Day_2 :
   antonio "\"So I thought... Extra weight training!!!\""
   mc "\"... Thanks\""
 
-  define Mia_points = 1
-  define Permione_points = 2
-
   if Mia_points > Permione_points:
-    mc "I hope Mia see me on his back..."
+    mc "I hope Mia didn't see me on his back..."
     mc "So embarassing...."
   elif Permione_points >= Mia_points:
-    mc "I hope Mia see me on his back..."
+    mc "I hope Permione didn't see me on his back..."
     mc "So embarassing...."
 
   antonio "\"Boy! You better sober up!\""
