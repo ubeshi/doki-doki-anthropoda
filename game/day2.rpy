@@ -9,6 +9,8 @@
   image bg track = "images/backgrounds/bg_track.png"
   image bg tunnel = "images/backgrounds/bg_tunnel.jpg"
 
+  image black = Solid("#000")
+
   image antonio normal = "images/antonio/normal.png"
   image mia normal = "images/mia/normal.png"
   image permione normal = "images/permione/normal.png"
@@ -19,81 +21,15 @@ define mia = Character("Mia")
 define permione = Character("Permione")
 define teacher = Character("Teacher")
 
-label start:
-
-  play music "music/tracks/1_chill_pop.wav" volume 0.5
-  scene bg room
-  show antonio normal
-
-  $ player_name = renpy.input("What is your name, Magical Boy?")
-  $ player_name = player_name.strip()
-
-  if not player_name:
-    $ player_name = "Brother of Mia"
-
-  mc "I'm [player_name]!"
-  antonio "I'm an ant!"
-
-  hide antonio normal
-  show mia normal
-
-  mia "I'm a moth and one of the main love interests!"
-
-  hide mia normal
-  show permione normal
-
-  permione "I'm a praying mantis and another of the main love interests!"
-
-  scene bg classroom
-
-  mc "I'm in a classroom? WOAH"
-
-  scene bg club
-
-  mc "I'm in a club?! Wow!"
-
-  scene bg club_2
-
-  mc "I'm in a club again!? Sheeesh."
-
-  scene bg college_outside
-
-  mc "I'm outside of my college."
-
-  scene bg flower_bed
-
-  mc "I hope I don't see any sexy plants here."
-
-  scene bg other_dorm
-
-  mc "I sure hope not to see any other bugs in this other dorm."
-
-  scene bg track
-
-  mc "Wow! I am so good at track and field."
-
-  scene bg tunnel
-
-  mc "This is a very scary tunnel."
-
-  jump Day_2
-
-  return
-
 label Day_2 :
   scene bg room
   show antonio normal
   antonio "\"92, 93, 94!\""
   hide antonio normal
-  image black = Solid("#000")
-  scene black
-  mc "..."
   scene bg room
   show antonio normal
   antonio "\"95, 96, 97!\""
   hide antonio normal
-  scene black
-  mc "..."
   scene bg room
   show antonio normal
   antonio "\"98, 99, 100!\""
@@ -154,7 +90,8 @@ label Day_2 :
   play music "music/sfx/human/heartbeats.mp3" volume 0.5
   mc "should I go say hi?"
   play music "music/tracks/3_acoustic_pop.wav" volume 0.5
-  show mia normal
+  show mia at right zoom 0.5
+  show permione at left
   mia "\"What do you mean you never asked me to!!\""
   mia "\"You always say you will clean up afterwards\""
   mia "\"and then NEVER DO!\""
@@ -207,7 +144,7 @@ label Day_2 :
     hide permione normal
     scene black
     play music "music/sfx/daily/door_chime3.mp3" volume 0.5
-    antonio "\"IM FREE\""
+    antonio "\"IM FREEEEEEE\""
     scene bg college_outside
     show permione normal
     permione "\"Quick! Follow me!\""
@@ -235,5 +172,38 @@ label Day_2 :
   if Choice == "Mia":
     show mia normal
     mc "\"oh uh... good morning Mia\""
-    mia "\"Good luck!\""
+    mia "\"Ahhhh I didn’t read the magazine..\""
+    mia "\"I uh just.. Looked at the cover!\""
+    mia "\"...\""
+    mia "\"and uh cleaned the inside. YES!\""
+    mia "\"I made sure all the pages were clean. That's it!!\""
+    mc "..."
+    mia "\"Nooo! I can explain...\""
+    play music "music/sfx/daily/door_chime3.mp3" volume 0.5
+    mia "\"WE’LL TALK AFTER!!\""
+    mia "\"GOOD LUCK! I know you’ll do well.\""
+    mia "\"You always did...!\""
+    scene black
+    play music "music/sfx/daily/door_chime3.mp3" volume 0.5
+    antonio "\"IM FREEEEEEE\""
+    scene bg college_outside
+    scene bg bg other_dorm
+    mia "\"and then PM complains that I shouldn’t touch her stuff\""
+    mia "\"and yells at me!\""
+    mc "..."
+    mia "\"Like... you would have cleaned up too right?\""
+    mc "nod nod"
+    mia "\"Anyways... enought about me!\""
+    mia "\"How have you been?\""
+    mia "\"I haven't heard from you ever since I cocooned....\""
+    mc "..."
+    mia "..."
+    mia "\'I'm so sorry...\""
+    mia "\"I didn't mean to bring that up...\""
+    mia "\"You are perfect the way you are!!\""
+    mia "\"...\""
+    mia "\"Oh right, do you want to see some pictures I took?\""
+    mia "\"I've always wanted to show you how much I've grown\""
+    mia "\"Here and here, and this one too!!\""
+    scene black
   return
