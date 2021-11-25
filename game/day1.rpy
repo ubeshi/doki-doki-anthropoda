@@ -370,7 +370,7 @@ label Day_1:
 
     stop music
 
-    jump day2
+    return
 
   # Mia Path
   if Choice == "Mia":
@@ -600,6 +600,4 @@ label Day_1:
 
     stop music
 
-    jump day2
-
-  return
+    return
