@@ -437,6 +437,8 @@ label day1:
 
     stop music
 
+    jump day2
+
   # Mia Path
   if Choice == "Mia":
     mc """
