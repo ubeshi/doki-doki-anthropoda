@@ -215,7 +215,7 @@ label day1:
 
   pillbug "\"Oh please my queen let me do your homework I need this so badly please please please\""
 
-  banana "\"{i}*gurgles*{/i}\""
+  banana "{i}*gurgles*{/i}"
 
   mc "Wait. Is she pointing at me?"
 
@@ -226,7 +226,8 @@ label day1:
   mc "Nathan has a big ant farm. He decided to sell some of his ants. He started with 965 ants. He sold 213. How many ants does he have now?"
   mc "\"It’s 35!\""
   
-  unknown_mantis "\"Thank you so much!! {i}*blushes*{/i}\""
+  unknown_mantis "\"Thank you so much!!\""
+  unknown_mantis "{i}*blushes*{/i}"
   unknown_mantis "\"You’re actually a really cool and smart and handsome caterpillar!\""
   unknown_mantis "\"My name is Permione the Praying Mantis. I am sultry, physically adept, and popular.\""
   
@@ -236,7 +237,7 @@ label day1:
   mc "\"And popular.\""
 
   permione_ "\"I’m staying at building 1231415. Make sure to come around some time and hang out.\""
-  permione_ "\"{i}*blushes and scurries away like a bug*{/i}\""
+  permione_ "{i}*blushes and scurries away like a bug*{/i}"
 
   hide permione normal
 
@@ -283,7 +284,8 @@ label day1:
 
   mc "\"That's a really good one\""
 
-  mia_ "\"I’ll be studying at the library! Guess I’m a bit of a bookworm hehe {i}*blushes blue*{/i}\""
+  mia_ "\"I’ll be studying at the library! Guess I’m a bit of a bookworm hehe\""
+  mia_ "{i}*blushes blue*{/i}"
   mia_ "\"Come study with me if you’re free!\""
   mia_ "\"But remember one thing…\""
   mia_ "\"There are moths outside, ready to die for a light they crave but which is denied to them,\""
@@ -431,9 +433,9 @@ label day1:
     mc "I think he's going to hit me"
     mc "..."
 
-    stop music
-
     scene bg black
+
+    stop music
 
   # Mia Path
   if Choice == "Mia":
@@ -662,5 +664,7 @@ label day1:
     scene bg black
 
     stop music
+
+    jump day2
 
   return
