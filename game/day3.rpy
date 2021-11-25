@@ -333,9 +333,7 @@ label Day_3_Permione:
   \"I'd LOVE to go with you!\""""
 
   play audio "music/sfx/magic01/chorus_of_angels1.mp3" volume 0.25
-  
-  #TODO check if day 4 is called Day_4
-  jump Day_4
+
   return
 
 label Day_3_Mia:
