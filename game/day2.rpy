@@ -1,27 +1,4 @@
-﻿init:
-  image bg room = "images/backgrounds/bg_bedroom.png"
-  image bg classroom = "images/backgrounds/bg_classroom.png"
-  image bg club = "images/backgrounds/bg_club.png"
-  image bg club_2 = "images/backgrounds/bg_club_2.png"
-  image bg college_outside = "images/backgrounds/bg_college_outside.png"
-  image bg flower_bed = "images/backgrounds/bg_flower_bed.png"
-  image bg other_dorm = "images/backgrounds/bg_other_dorm.png"
-  image bg track = "images/backgrounds/bg_track.png"
-  image bg tunnel = "images/backgrounds/bg_tunnel.jpg"
-
-  image black = Solid("#000")
-
-  image antonio normal = "images/antonio/normal.png"
-  image mia normal = "images/mia/normal.png"
-  image permione normal = "images/permione/normal.png"
-
-define mc = Character("[player_name]")
-define antonio = Character("Antonio")
-define mia = Character("Mia")
-define permione = Character("Permione")
-define teacher = Character("Teacher")
-
-label Day_2 :
+﻿label Day_2 :
   scene bg room
   show antonio normal
   antonio "\"92, 93, 94!\""
