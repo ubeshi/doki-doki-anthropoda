@@ -1,163 +1,154 @@
-﻿init:
-  image bg room = "images/backgrounds/bg_bedroom.png"
-  image bg classroom = "images/backgrounds/bg_classroom.png"
-  image bg club = "images/backgrounds/bg_club.png"
-  image bg club_2 = "images/backgrounds/bg_club_2.png"
-  image bg college_outside = "images/backgrounds/bg_college_outside.png"
-  image bg flower_bed = "images/backgrounds/bg_flower_bed.png"
-  image bg other_dorm = "images/backgrounds/bg_other_dorm.png"
-  image bg track = "images/backgrounds/bg_track.png"
-  image bg tunnel = "images/backgrounds/bg_tunnel.jpg"
-
-  image black = Solid("#000")
-
-  image antonio normal = "images/antonio/normal.png"
-  image mia normal = "images/mia/normal.png"
-  image permione normal = "images/permione/normal.png"
-
-define mc = Character("[player_name]")
-define antonio = Character("Antonio")
-define mia = Character("Mia")
-define permione = Character("Permione")
-define teacher = Character("Teacher")
-
-label Day_4 :
+﻿label Day_4 :
   scene bg room
   play music "music/tracks/1_chill_pop.wav" volume 0.5
   show antonio normal
-  antonio "\"hmmmm\""
+  antonio "\"Hmmmm...\""
   show antonio at right
-  antonio "\"asdjkfp\""
+  antonio "\"Asdjkfpnaoidsnadaidoasdisaodniasodnasdas...\""
   show antonio normal
-  antonio "\"aSDfjP\""
+  antonio "\"Masfawionqmooqpmdaasnopfasksdoapasodk...\""
   show antonio at left
-  antonio "\"arhggg\""
+  antonio "\"Arhggg...\""
   show antonio normal
-  antonio """\"WhAT to DO! WHAT TO DO!!\"
+  antonio """\"What to do? What to do!\"
 
-  \"No no NOOOO\"
+  \"No, no, no!\"
 
-  \"This color scheme does NOT go well with my complexion...\"
+  \"This color scheme does {b}not{/b} go well with my complexion.\"
 
-  \"ahhhh...\"
+  \"Ahhhh...\"
 
-  \"How about this!?!\""""
-  mc "\"Uhh what are you doing Antonibro\""
-  antonio """\"Ahhh [player_name]! Your awake!!\"
+  \"How about this!\"
+  """
+  mc "\"Uh, what are you doing Antonibro?\""
+  antonio """\"Ah [player_name]! You're awake!\"
 
   \"What do you think looks best on me?\"
 
-  \"Purple or Red!\"
+  \"Purple or red?\"
 
-  \"I don't know if I want to go for that POP POP colour purple\"
+  \"I don't know if I want to go for that {i}pop pop{/i} purple.\"
 
-  \"Or the monochrome minimalistic red vibess\""""
-  mc "\"ummm what is this for?\""
-  antonio """\"My LOOK for tonight at the cricket club!!\"
+  \"Or the monochrome minimalistic red vibes...\""""
+  mc "\"What is this for?\""
+  antonio """
+  \"My look for tonight at the Cricket Club!\"
 
-  \"I have to look my FINESTT for my DATE\""""
-  mc "\"OH NO!! I completly forgot to get something to wear!\""
+  \"I have to look my {i}finest{/i} for my date!\"
+  """
+  mc "\"Oh no! I completly forgot to get something to wear!\""
   antonio """\"Yeah? You silly goose.\"
 
   \"Aren't you glad you have a bestie like me?\"
 
-  \"You can take my Red SUIT! I think your Ladybug is going to LOVE the POP POP alphit ;)\""""
+  \"You can take my red suit! I think your ladybug is going to {i}love{/i} the alphit.\""""
   mc "\"You are a lifesaver!\""
-  mc "huh? Why cant I get up...."
-  mc """\"OH MY BERRY!!\"
+  
+  "Huh? Why can't I get up?"
 
-  \"DID YOU REALIZE IVE BEEN HANGING THE ENTIRE TIME??\""""
-  antonio """\"Yes siree\"
+  mc """
+  \"Oh my berry!\"
 
-  \"I thought you finally getting more comfortable\"
+  \"Did you realize, I've been hanging the entire time?!\"
+  """
+  antonio """\"Yes siree!\"
 
-  \"Is that not your natural sleeping position??\""""
-  mc "\"ANTONIO!! IM GREEN! AND HARD!\""
-  antonio "\"ummm I dont swing that way but uhhh\""
-  mc """\"NO!! what??\"
+  \"I thought you finally getting more comfortable.\"
 
-  \"IM GOING UNDER METAMORPHOSIS\"
+  \"Is that not your natural sleeping position?\""""
+  mc "\"Antonio! I'm green! And hard!\""
+  antonio "\"Hey! That's a DLC scene!\""
+  mc """\"No! I mean...\"
 
-  \"how am I going to go to the ball like this!!?\""""
-  antonio "\"meta.. meta mofo sus??\""
-  mc "..."
-  mc "\"... Its my... special time\""
-  antonio """\"STOP RIGHT THERE BOY!\"
+  \"I'm going under {b}metamorphosis{/b}!\"
 
-  \"SAY NO MOREE!\"
+  \"How am I going to go to the ball like this?\""""
+  antonio "\"Meta... Meta mofo sus?\""
+  
+  "..."
+
+  mc "\"It's my... special time...\""
+  antonio """\"{b}Stop right there, boy{/b}!\"
+
+  \"Say no more!\"
 
   \"I will... I will remember you...\"
 
-  \"you were the cutest fat ant I have ever met\"
+  \"You were the cutest fat ant I have ever met,\"
 
-  \"you were handsome like me but a bit too hairy\"
+  \"You were handsome like me, but a bit too hairy,\"
 
-  \"but you were loyal, and fast and and....\"
+  \"But you were loyal, and fast and, and...\"
 
-  \"I WILL REMEMBER YOU!!!\""""
-  mc "..."
-  antonio "..."
-  mc """\"No.. you slug brain!\"
+  \"I will remember you!\""""
 
-  \"I'm cocooning... evolving!!\"
+  mc """\"No, you slug brain.\"
 
-  \"WAIT!!\"
+  \"I'm cocooning... evolving!\"
 
-  \"YOU THOUGHT I WAS AN ANT?\""""
+  \"Wait!\"
+
+  \"You thought I was an ant?\""""
+
   antonio """\"...\"
 
-  \"DONT SWEAT THE DETS\"
+  \"Don't sweat the deets!\"
 
-  \"YOU ARE MY BEST BUD\"
+  \"You are my best bud!\"
 
-  \"AND NOTHINGS GOING TO CHANGE THAT\""""
+  \"And nothing's gonna change that!\""""
+  
   mc """\"...\"
 
-  \"but.. what am I going to do?\""""
+  \"But.. what am I going to do?\""""
 
-  #if Mia_points > Permione_points:
-  #  mc "\"Will Mia even recognize me??\""
-  #elif Permione_points >= Mia_points:
-  #  mc "\"Will Permione even recognize me??\""
+  if Choice == "Mia":
+    mc "\"Will Mia even recognize me?\""
+  
+  if Choice == "Permioine":
+    mc "\"Will Permione even recognize me?\""
 
-  mc """\"What if she doesn't like me anymore!\"
+  mc """\"What if she doesn't like me anymore?\"
 
-  \"uhh I think I have butterflies in my stomach\""""
-  antonio """\"WELL ILL SNAP SOME SENSE INTO ER IF THATS THE CASE\"
+  \"I think I have butterflies in my stomach...\""""
 
-  \"YOURE THE BEST DARN MAN ON THIS CAMPUS BESIDES ME!\"
+  antonio """\"Well, I'll snap some sense into 'er if that's the case!\"
 
-  \"THERES NO WAY SHE WONT LIKE YA\"
+  \"You're the best darn man on this campus, besides me!\"
 
-  \"NOW GO GET CHANGED AND ILL GO GET HER!\""""
+  \"There's no way she won't like ya!\"
+
+  \"Now go get changed, and I'll go get her!\""""
+
   hide antonio normal
-  mc """\"WAIT!! I'm not even out of my cocoon yet...\"
 
-  ...struggle...
+  mc "\"Wait! I'm not even out of my cocoon yet...\""
 
-  .....struggle...
+  "...struggle..."
 
-  ...struggle...
+  ".....struggle..."
 
-  -pop-
+  "...struggle..."
 
-  huh what are these colors?
+  "-pop-"
 
-  Im.. Im a butterfly??"""
+  "Huh. What are these colors?"
 
-  if Mia_points > Permione_points:
+  "I'm.. I'm a butterfly?"
+
+  if Choice == "Mia":
     show mia normal
-    mia """\"[player_name]??\"
+    mia """\"[player_name]?\"
 
-    \"YOU YOU....\"
+    \"You... you...\"
 
-    \"you are beautiful...\""""
-    mc "\"... You are pretty too\""
-    mia "..."
-    mc "..."
+    \"You are beautiful!\""""
+
+    mc "\"You are pretty too!\""
+
     hide mia normal
     show antonio normal
-    antonio "\"LETS GO LETS GO!!\""
+    antonio "\"Let's go! Or we'll be late!\""
     hide antonio normal
     scene bg college_outside
     play music "music/tracks/9_emotional_piano.wav" volume 0.5
@@ -166,20 +157,20 @@ label Day_4 :
     scene bg other_dorm
     scene bg club_2
     show mia normal
-    mia "\"Um [player_name]\""
-    mc "..."
-    mia "..."
-    mc "\"yes?\""
-    mia "\"Lets go home...\""
-    mc "nod"
+    mia "\"Um, [player_name]...\""
+    mc "\"Yes?\""
+    mia "\"Let's go home.\""
+    
+    "I nod. Time to go home."
+    "THE END"
 
-  elif Permione_points >= Mia_points:
+  if Choice == "Permioine":
     show permione normal
-    permione """\"slurpp.. wow [player_name]\"
+    permione """\"*Slurp* Wow, [player_name].\"
 
-    \"you hot\"
+    \"You hot.\"
 
-    \"Come hereee\""""
+    \"Come here 😘!\""""
     hide permione normal
     play music "music/tracks/7_emotional_piano.wav" volume 0.5
     scene bg college_outside
@@ -187,14 +178,17 @@ label Day_4 :
     scene bg track
     scene bg club_2
     show permione normal
-    permione """\"COME HERE [player_name]\"
+    permione """\"Come here [player_name]!\"
     
-    \"over here.. OVER HERE!!!\""""
-    mc "\"where are we going??\""
-    permione "smooch smooch smooch"
-    mc "smooch"
-    permione "SMOOCH SMOOOCHHHH POP SMOOCH"
-    mc "..."
-    permione "\"tastyyyyy....\""
+    \"Over here.. Over here!\""""
+    mc "\"Where are we going?\""
+    
+    "{i}smooch{/i}"
+    "{i}smooch smooch smooch{/i}"
+    "{b}SMOOCH SMOOOCHHHH POP SMOOCH{/b}"
+    "..."
+
+    permione "\"Tasty...\""
+    "THE END"
 return
    
