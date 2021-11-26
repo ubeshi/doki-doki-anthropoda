@@ -189,6 +189,11 @@
     "..."
 
     permione "\"Tasty...\""
+
+    # fight scene with hercules beetle
+
+    mc "\"You think I took tai chi for fun?\""
+
     "THE END"
 return
    
