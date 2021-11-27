@@ -187,7 +187,8 @@ label Day_1:
   "Like a face that you remember going to the swings with after getting off the same bus."
   "Like a face that you remember..."
 
-  show mia normal
+  show mia normal at top:
+    zoom 0.5
 
   mia "\"It's-a-me!\""
   mia "\"Mia!\""
@@ -388,7 +389,8 @@ label Day_1:
     Oh, it's Mia!
     """
     
-    show mia normal
+    show mia normal at top:
+      zoom 0.5
 
     stop music
     play music "music/tracks/1_chill_pop.wav" volume 0.5

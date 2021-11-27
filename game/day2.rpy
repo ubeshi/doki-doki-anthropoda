@@ -133,7 +133,8 @@
     "..."
 
   if Choice == "Mia":
-    show mia normal
+    show mia normal at top:
+      zoom 0.5
     mc "\"Oh uh... good morning Mia.\""
     mia "\"Ah, I didn't read the magazine.\""
     mia "\"I uh, just... looked at the cover!\""
