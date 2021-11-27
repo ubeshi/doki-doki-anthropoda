@@ -248,16 +248,16 @@ label Day_3:
     xalign -0.1
   permione "\"Yes baby, I knew you could do it!\""
 
-  show ladybug normal at truecenter:
+  show ladybug normal at top:
     zoom 0.5
     xzoom -1.0
     xalign 0.4
-  show ladybug normal onlayer layer2 at truecenter:
+  show ladybug normal onlayer layer2 at top:
     zoom 0.5
     xzoom -1.0
-    xalign 0.4
-    yalign 0.3
-  show ladybug normal onlayer layer3 at truecenter:
+    xalign 0.5
+    yalign 0.2
+  show ladybug normal onlayer layer3 at top:
     zoom 0.5
     xzoom -1.0
     xalign 0.55
