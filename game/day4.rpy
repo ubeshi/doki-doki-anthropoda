@@ -105,7 +105,7 @@
   if Choice == "Mia":
     mc "\"Will Mia even recognize me?\""
   
-  if Choice == "Permioine":
+  if Choice == "Permione":
     mc "\"Will Permione even recognize me?\""
 
   mc """\"What if she doesn't like me anymore?\"
@@ -164,25 +164,100 @@
     "I nod. Time to go home."
     "THE END"
 
-  if Choice == "Permioine":
+  if Choice == "Permione":
+    stop music
+    
     show permione normal
     permione """\"*Slurp* Wow, [player_name].\"
 
     \"You hot.\"
 
-    \"Come here 😘!\""""
-    hide permione normal
-    play music "music/tracks/7_emotional_piano.wav" volume 0.5
-    scene bg college_outside
-    scene bg tunnel
-    scene bg track
+    \"Come here my sweet churro!\"
+
+    """
+
+    play music "music/tracks/9_emotional_piano.wav" volume 0.5
+
+    mc """
+
+    ...
+
+    \"Wow. You're really something Permione.\"
+
+    """
+
+    """
+    How does she do it?
+
+    Permione is so sultry.
+
+    It's not often you meet someone who carries themselves with the husky confidence of an old man in a locker room.
+    
+    ...
+
+    It's magical.
+
+    """
+
+    permione """
+    ...
+
+    I know.
+
+    """
+
+    """
+
+    We spend a bit of time in the room.
+
+    It's getting dark.
+
+    Time to get ready for the dance at the Cricket Club.
+
+    """
+
+    scene black
+
+    """
+
+    We rushed to the Cricket Club.
+
+    """
+
     scene bg club_2
-    show permione normal
+
+    """
+
+    Everyone's here!
+
+    I think I lost Permione...
+
+    Where is she?
+
+    """
+
     permione """\"Come here [player_name]!\"
     
     \"Over here.. Over here!\""""
-    mc "\"Where are we going?\""
     
+    mc "\"Oh hey!\""
+
+    """
+
+    I walked the around the crowds of insects to get to Permione.
+
+    She looks radiant.
+
+    Like a thick and voluptuous blade of grass.
+
+    """
+
+    permione "\"How do I look?\""
+
+    mc "\"You look like a thick and voluptuous blade of grass.\""
+
+    permione "\"Wow [player_name]. You always know what to say to a sultry and physically adept mantis like me...\""
+
     "{i}smooch{/i}"
     "{i}smooch smooch smooch{/i}"
     "{b}SMOOCH SMOOOCHHHH POP SMOOCH{/b}"
@@ -190,9 +265,7 @@
 
     permione "\"Tasty...\""
 
-    # fight scene with hercules beetle
-
-    mc "\"You think I took tai chi for fun?\""
+    "Bro wtf she ate my head lol"
 
     "THE END"
 return
