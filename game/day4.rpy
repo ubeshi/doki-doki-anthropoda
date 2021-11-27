@@ -53,7 +53,7 @@
   """
   antonio """\"Yes siree!\"
 
-  \"I thought you finally getting more comfortable.\"
+  \"I thought you were finally getting more comfortable.\"
 
   \"Is that not your natural sleeping position?\""""
   mc "\"Antonio! I'm green! And hard!\""
@@ -105,7 +105,7 @@
   if Choice == "Mia":
     mc "\"Will Mia even recognize me?\""
   
-  if Choice == "Permioine":
+  if Choice == "Permione":
     mc "\"Will Permione even recognize me?\""
 
   mc """\"What if she doesn't like me anymore?\"
@@ -150,13 +150,102 @@
     show antonio normal
     antonio "\"Let's go! Or we'll be late!\""
     hide antonio normal
-    scene bg college_outside
-    play music "music/tracks/9_emotional_piano.wav" volume 0.5
-    scene bg college_outside
-    scene bg flower_bed
-    scene bg other_dorm
+  
     scene bg club_2
-    show mia normal
+    play music "music/tracks/4_hiphop.wav" volume 0.5
+    show antonio normal at truecenter:
+      zoom 0.5
+      xzoom -1.0
+
+    show ladybug normal at truecenter:
+      zoom 0.5
+      xzoom -1.0
+      xalign 0.4
+      yalign 0.7
+    
+    antonio """
+    \"Go gogogogo.\"
+
+    \"Where are the rest of my posie\""""
+
+    show antonio normal onlayer layer2 at truecenter:
+      zoom 0.5
+      xzoom -1.0
+      xalign 0.4
+      yalign 0.3
+
+    show ladybug normal onlayer layer2 at truecenter:
+      zoom 0.5
+      xzoom -1.0
+      xalign 0.3
+      yalign 0.5
+
+    show antonio normal onlayer layer3 at truecenter:
+      zoom 0.5
+      xzoom -1.0
+      xalign 0.7
+      yalign 0.7
+
+    antonio "\"LETS SO BOOM BOOM BOOM\""
+
+    ladybugs """\"WHOOOO!!\"
+
+    \"AHH ITS DJ CiciDada!!\""""
+    
+    announcer "\"ITS TIME TO PARTY!!\""
+
+    unknown_ant """
+
+    \"IS THAT A HEATLAMP\"
+
+    \"Its so bright and...\""""
+    
+    "Ant 2 walks slowly walks towards the bright light"
+    
+    hide antonio normal onlayer layer3
+
+    unknown_ant "\"BOBBY NOOOO!\""
+
+    hide antonio normal
+    hide ladybug normal
+    hide antonio normal onlayer layer2
+    hide ladybug normal onlayer layer2
+
+    "Ant 3 and Antonio follow behind."
+
+    "They drag Bobby back to the dance floor."
+
+    "In the distant a bunch of fire ants show up!"
+
+    announcer "\"ITS A DANCE BATTLE!!\""
+
+    show mia normal at truecenter:
+      zoom 0.5
+
+    mia """\"[player_name], it's getting a bit loud in here.\"
+    
+    \"Do you want to head outside with me?\""""
+    
+    mc "nod nod"
+    hide mia normal
+
+    scene bg flower_bed
+    play music "music/tracks/9_emotional_piano.wav" volume 0.5
+
+    show mia normal at truecenter:
+      zoom 0.5
+
+    mia """\"I never knew Antonio could dance!!\"
+
+    \"Haha this has been the best of my life...\"
+
+    \"I still can't believe {b}you{\b} chose {b}me{\b}!\"
+
+    \"Sometimes I wonder if I am still inside my cocoon... dreaming.\""""
+    
+    "..."
+    "..."
+
     mia "\"Um, [player_name]...\""
     mc "\"Yes?\""
     mia "\"Let's go home.\""
@@ -164,31 +253,109 @@
     "I nod. Time to go home."
     "THE END"
 
-  if Choice == "Permioine":
+  if Choice == "Permione":
+    stop music
+    
     show permione normal
     permione """\"*Slurp* Wow, [player_name].\"
 
     \"You hot.\"
 
-    \"Come here 😘!\""""
-    hide permione normal
-    play music "music/tracks/7_emotional_piano.wav" volume 0.5
-    scene bg college_outside
-    scene bg tunnel
-    scene bg track
+    \"Come here my sweet churro!\"
+
+    """
+
+    play music "music/tracks/9_emotional_piano.wav" volume 0.5
+
+    mc """
+
+    ...
+
+    \"Wow. You're really something Permione.\"
+
+    """
+
+    """
+    How does she do it?
+
+    Permione is so sultry.
+
+    It's not often you meet someone who carries themselves with the husky confidence of an old man in a locker room.
+    
+    ...
+
+    It's magical.
+
+    """
+
+    permione """
+    ...
+
+    I know.
+
+    """
+
+    """
+
+    We spend a bit of time in the room.
+
+    It's getting dark.
+
+    Time to get ready for the dance at the Cricket Club.
+
+    """
+
+    scene black
+
+    """
+
+    We rushed to the Cricket Club.
+
+    """
+
     scene bg club_2
-    show permione normal
+
+    """
+
+    Everyone's here!
+
+    I think I lost Permione...
+
+    Where is she?
+
+    """
+
     permione """\"Come here [player_name]!\"
     
     \"Over here.. Over here!\""""
-    mc "\"Where are we going?\""
     
+    mc "\"Oh hey!\""
+
+    """
+
+    I walked the around the crowds of insects to get to Permione.
+
+    She looks radiant.
+
+    Like a thick and voluptuous blade of grass.
+
+    """
+
+    permione "\"How do I look?\""
+
+    mc "\"You look like a thick and voluptuous blade of grass.\""
+
+    permione "\"Wow [player_name]. You always know what to say to a sultry and physically adept mantis like me...\""
+
     "{i}smooch{/i}"
     "{i}smooch smooch smooch{/i}"
     "{b}SMOOCH SMOOOCHHHH POP SMOOCH{/b}"
     "..."
 
     permione "\"Tasty...\""
+
+    "Bro wtf she ate my head lol"
+
     "THE END"
 return
    
