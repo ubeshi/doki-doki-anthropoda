@@ -12,7 +12,7 @@
 ##
 ## The _() surrounding the string marks it as eligible for translation.
 
-define config.name = _("Insect Incest")
+define config.name = _("Doki Doki Anthropoda")
 
 
 ## Determines if the title given above is shown on the main menu screen. Set
@@ -30,6 +30,7 @@ define config.version = "1.0"
 ## triple-quotes, and leave a blank line between paragraphs.
 
 define gui.about = _p("""
+For more of our work, please check out https://ubeshi.com.
 """)
 
 
@@ -37,7 +38,7 @@ define gui.about = _p("""
 ## distribution. This must be ASCII-only, and must not contain spaces, colons,
 ## or semicolons.
 
-define build.name = "InsectIncest"
+define build.name = "DokiDokiAnthropoda"
 
 
 ## Sounds and music ############################################################
