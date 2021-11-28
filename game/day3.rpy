@@ -101,7 +101,7 @@ label Day_3:
   """
 
   play sound "music/sfx/human/whistling2.mp3"
-  announcement """ \"{i}{b}The hundred meter sprint is beginning soon!{/b}{/i}\"
+  announcement """\"{i}{b}The hundred meter sprint is beginning soon!{/b}{/i}\"
   
   \"{i}{b}If you are participating, please make your way over to the track.{b}{/i}\""""
   stop sound
@@ -212,7 +212,7 @@ label Day_3:
 
   \"{i}{b}He's headed towards the finish line!{/b}{/i}\"
 
-  \"{i}{b}He has overtaken all his competition, and about the finish the sprint!{/b}{/i}\""""
+  \"{i}{b}He has overtaken all his competition, and is about the finish the sprint!{/b}{/i}\""""
 
   show antonio normal
   antonio """\"RUN [player_name!u], RUN!\"
@@ -296,7 +296,7 @@ label Day_3:
     "Who should I go with?"
 
     #TODO add in choice variable
-    "Go to Permione's long jump Event.":
+    "Go to Permione's long jump event.":
       mc """\"I'd love to watch your event Permione!\"
 
       Thanks Mia, I'll catch you later!\""""
