@@ -183,7 +183,7 @@ label Day_1:
   play music "music/tracks/9_emotional_piano.wav" volume 0.5
 
   "I turn around and see a somewhat familiar face."
-  "Like a face that you remember from when your childhood."
+  "Like a face that you remember from your childhood."
   "Like a face that you remember going to the swings with after getting off the same bus."
   "Like a face that you remember..."
 

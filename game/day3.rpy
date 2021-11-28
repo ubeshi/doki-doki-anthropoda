@@ -90,7 +90,9 @@ label Day_3:
   mc """\"Thanks ladies.\"
   
   \"I'll do my best!\"
-  
+  """
+
+  """
   I wonder where Mia and Permione are.
 
   So many things are happening,
@@ -137,7 +139,7 @@ label Day_3:
   \"You got this!\""""
   hide antonio normal
 
-  mc "Guess there's nothing to do but try..."
+  "Guess there's nothing to do but try..."
 
   announcer """\"{b}Welcome, welcome!{/b}\"
 
@@ -383,7 +385,7 @@ label Day_3_Mia:
   show mia normal at top:
     zoom 0.5
 
-  play sound "/music/sfx/human/blowing_nose.mp3"
+  play sound "/music/sfx/human/blowing_nose.mp3" volume 0.25
   mia "\*sniffles\*"
   stop sound
 

@@ -137,7 +137,8 @@
   "I'm.. I'm a butterfly?"
 
   if Choice == "Mia":
-    show mia normal
+    show mia normal at truecenter:
+      zoom 0.5
     mia """\"[player_name]?\"
 
     \"You... you...\"
@@ -166,7 +167,7 @@
     antonio """
     \"Go gogogogo.\"
 
-    \"Where are the rest of my posie\""""
+    \"Where are the rest of my posie?\""""
 
     show antonio normal onlayer layer2 at truecenter:
       zoom 0.5
@@ -186,21 +187,21 @@
       xalign 0.7
       yalign 0.7
 
-    antonio "\"LETS SO BOOM BOOM BOOM\""
+    antonio "\"LETS GO, BOOM BOOM BOOM.\""
 
-    ladybugs """\"WHOOOO!!\"
+    ladybugs """\"WHOOOO!\"
 
-    \"AHH ITS DJ CiciDada!!\""""
+    \"AHH, IT'S DJ CiciDada!\""""
     
-    announcer "\"ITS TIME TO PARTY!!\""
+    announcer "\"ITS TIME TO PARTY!\""
 
     unknown_ant """
 
-    \"IS THAT A HEATLAMP\"
+    \"IS THAT A HEATLAMP?\"
 
-    \"Its so bright and...\""""
+    \"It's so bright and...\""""
     
-    "Ant 2 walks slowly walks towards the bright light"
+    "Bobby walks slowly walks towards the bright light."
     
     hide antonio normal onlayer layer3
 
@@ -211,13 +212,13 @@
     hide antonio normal onlayer layer2
     hide ladybug normal onlayer layer2
 
-    "Ant 3 and Antonio follow behind."
+    "Antman and Antonio follow behind."
 
     "They drag Bobby back to the dance floor."
 
-    "In the distant a bunch of fire ants show up!"
+    "In the distant, a bunch of fire ants show up!"
 
-    announcer "\"ITS A DANCE BATTLE!!\""
+    announcer "\"IT'S A DANCE BATTLE!\""
 
     show mia normal at truecenter:
       zoom 0.5
@@ -226,7 +227,7 @@
     
     \"Do you want to head outside with me?\""""
     
-    mc "nod nod"
+    mc "*nod nod*"
     hide mia normal
 
     scene bg flower_bed
@@ -235,9 +236,9 @@
     show mia normal at truecenter:
       zoom 0.5
 
-    mia """\"I never knew Antonio could dance!!\"
+    mia """\"I never knew Antonio could dance!\"
 
-    \"Haha this has been the best of my life...\"
+    \"This has been the best night of my life.\"
 
     \"I still can't believe {b}you{\b} chose {b}me{\b}!\"
 
