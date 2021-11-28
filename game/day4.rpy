@@ -291,7 +291,7 @@
     permione """
     ...
 
-    I know.
+    \"I know.\"
 
     """
 
@@ -333,13 +333,15 @@
 
     """
 
-    I walked the around the crowds of insects to get to Permione.
+    I walked around the crowds of insects to get to Permione.
 
     She looks radiant.
 
     Like a thick and voluptuous blade of grass.
 
     """
+
+    show permione normal
 
     permione "\"How do I look?\""
 
