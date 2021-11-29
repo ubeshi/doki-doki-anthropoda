@@ -1,4 +1,7 @@
 ﻿label Day_4 :
+
+  "-Day 4-"
+
   scene bg room
   play music "music/tracks/1_chill_pop.wav" volume 0.5
   show antonio normal

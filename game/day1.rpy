@@ -9,6 +9,8 @@ label Day_1:
   # Choice
   $ Choice = ""
 
+  "-Day 1-"
+
   play music "music/tracks/1_chill_pop.wav" volume 0.5
   scene bg college_outside
 
@@ -360,6 +362,7 @@ label Day_1:
   
     scene black
     stop music
+    play sound "music/sfx/daily/locking_a_wooden_door1.mp3" volume 0.25
 
     "Smack!"
 
@@ -584,6 +587,7 @@ label Day_1:
 
     scene black
     stop music
+    play sound "music/sfx/daily/locking_a_wooden_door1.mp3" volume 0.25
 
     "Smack!"
 

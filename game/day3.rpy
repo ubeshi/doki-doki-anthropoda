@@ -1,5 +1,8 @@
 label Day_3:
   scene black
+
+  "-Day 3-"
+
   play sound "music/sfx/human/snoring.mp3" volume 0.5
 
   "Zzz... ZZzz..."
