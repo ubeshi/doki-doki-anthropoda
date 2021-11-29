@@ -82,7 +82,7 @@ define antonio_and_mc = Character("You and Antonio", callback = antonio_voice)
 define banana = Character("Unknown Banana Slug")
 define internal_dialogue = Character("")
 define pillbug = Character("Unknown Pillbug")
-define unknown = Character("Unknown")
+define unknown = Character("Unknown", callback = antonio_voice)
 define you = Character("You")
 
 # day2 specific characters
