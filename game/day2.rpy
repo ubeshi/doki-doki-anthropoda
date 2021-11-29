@@ -1,4 +1,7 @@
 ﻿label Day_2 :
+
+  "-Day 2-"
+
   scene bg room
   show antonio normal
   antonio "\"92, 93, 94!\""
