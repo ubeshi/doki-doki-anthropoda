@@ -300,19 +300,20 @@ label Day_3:
   menu:
     "Who should I go with?"
 
-    #TODO add in choice variable
     "Go to Permione's long jump event.":
       mc """\"I'd love to watch your event Permione!\"
 
       Thanks Mia, I'll catch you later!\""""
-
+      $ Choice = "Permione"
+      $ Permione_points += 1
       jump Day_3_Permione
 
-    #TODO add in choice variable
     "Comfort Mia.":
       mc """\"Oh no Mia!\"
       
       \"I'll catch up with you later Permione. Good luck at your event!\""""
+      $ Choice = "Mia"
+      $ Mia_points += 1
       jump Day_3_Mia
   
   return
