@@ -82,7 +82,7 @@ define antonio_and_mc = Character("You and Antonio", callback = antonio_voice)
 define banana = Character("Unknown Banana Slug")
 define internal_dialogue = Character("")
 define pillbug = Character("Unknown Pillbug")
-define unknown = Character("Unknown")
+define unknown = Character("Unknown", callback = antonio_voice)
 define you = Character("You")
 
 # day2 specific characters
@@ -94,9 +94,9 @@ define announcement = Character("Announcement")
 define announcer = Character ("Announcer", callback = announcer_voice)
 
 label start:
-  call Day_1
-  call Day_2
-  call Day_3
-  call Day_4
+  call Day_1 from _call_Day_1
+  call Day_2 from _call_Day_2
+  call Day_3 from _call_Day_3
+  call Day_4 from _call_Day_4
 
   return
